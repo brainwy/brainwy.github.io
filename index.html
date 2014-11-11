@@ -27,8 +27,8 @@
         <!-- end tracking -->
 
         <div>
-            <div style="position: fixed; top: 0px; left: 0px; width:100%; background-color:white; border-bottom: 1px solid black;">
-            	<div style="width: 860px; margin: 0 auto;">
+            <div class="top_header_outer" style="top: 0px; left: 0px; width:100%; background-color:white; border-bottom: 1px solid black;">
+            	<div class="top_header">
 	                <a href="index.html">Main</a>
 	                <a href="faq.html" style="padding-left:1.5em;">FAQ</a>
 	                <a href="manual.html" style="padding-left:1.5em;">Manual</a>
@@ -41,7 +41,7 @@
         <div class="wrapper">
             <header>
                 
-<h1>LiClipse</h1>
+<h1 class="header_liclipse">LiClipse</h1>
 <p>Lightweight editors, theming and usability improvements for Eclipse</p>
 <!-- <p class="view"><a href="https://github.com/brainwy/liclipse.page">
     View the Project on GitHub <small>brainwy/liclipse.page</small></a></p> -->
@@ -80,7 +80,7 @@ Pricing: A LiClipse license is US$ 80<br><br><br>
             <li>Improved theming support based on Eclipse 4 improvements</li>
             <li>A fast editor supporting many languages builtin. <a href="languages.html">View supported languages.</a></li>
             <li>A simple way to add support for a new language</li>
-            <li>Usability improvements for all Eclipse editors</li>
+            <li>Usability improvements for all Eclipse editors (such as multi-edition and vertical indent guides)</li>
             <li>Bundling of many useful plugins in a single package</li>
             <li>Native installers</li>
         </ul>
@@ -91,6 +91,15 @@ Pricing: A LiClipse license is US$ 80<br><br><br>
         </p>
         <p><img src="images/theming.png"></p>
         
+        <h3>Release Highlights for LiClipse 1.2.1</h3>
+        <ul>
+            <strong>Indent Guides</strong>
+            <ul>
+                <li>Vertical indent guides are now available (applied to all Eclipse editors by default)</li>
+                <li>Options may be configured at Preferences > LiClipse > Vertical Indent Guide</li>
+            </ul>
+            <li>Upgraded to PyDev 3.9.0</li>
+        </ul>
         <h3>Release Highlights for LiClipse 1.2.0</h3>
         <ul>
             <li>It's now possible to specify the JSHint configuration for a project. View <a href="customize_javascript.html">JavaScript editor customization for details</a></li>
@@ -112,7 +121,7 @@ Pricing: A LiClipse license is US$ 80<br><br><br>
         <p>The HTML editor has advanced context-based code-completion</p>
         <p>The HTML, XML and JavaScript editors have code-analysis and code-formatting features</p>
         <h3>Usability improvements for all Eclipse editors</h3>
-        <p>At this point, the major improvement is multi-edition supporting all editors
+        <p>At this point, the major improvement is multi-edition and vertical indent guides, supporting all editors
             (such as PyDev, JDT, etc).
         </p>
         <p>See: <a href="multi_edition_video.html">Multi-Edition Video</a> for details</p>

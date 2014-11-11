@@ -190,6 +190,14 @@ footer {
   bottom:50px;
 }
 
+.top_header {
+    width: 860px; margin: 0 auto;    
+}
+
+.top_header_outer {
+    position: fixed;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -257,11 +265,24 @@ footer {
   pre, code {
     word-wrap:normal;
   }
+  
+  .top_header {
+      width: 720px; margin: 0 auto;    
+  }
+
 }
 
 @media print, screen and (max-width: 480px) {
   body {
     padding:15px;
+  }
+
+  .top_header {
+      width: 100%; margin: 0 auto;    
+  }
+
+  .top_header_outer {
+    position: relative;
   }
 
 }

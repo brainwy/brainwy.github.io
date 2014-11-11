@@ -31,7 +31,7 @@ page_dir = os.path.dirname(this_file_dir)
 
 
 HEADER = '''
-<h1>LiClipse</h1>
+<h1 class="header_liclipse">LiClipse</h1>
 <p>Lightweight editors, theming and usability improvements for Eclipse</p>
 <!-- <p class="view"><a href="https://github.com/brainwy/liclipse.page">
     View the Project on GitHub <small>brainwy/liclipse.page</small></a></p> -->
