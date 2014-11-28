@@ -57,72 +57,28 @@
             </header>
             <section>
                 
-        It's possible to customize the HTML editor code-formatter and validation by creating a custom <strong>.html.liclipseprefs</strong> file.<br/>
+        It's possible to customize the YAML editor by creating a custom <strong>.yaml.liclipseprefs</strong> file.<br/>
         <br/>
         The customization must be done per-project by creating a file such as:<br/>
         <br/>
-            <strong>project/.settings/.html.liclipseprefs</strong><br/>
+            <strong>project/.settings/.javascript.liclipseprefs</strong><br/>
             <br/>
             or<br/>
             <br/>
-            <strong>project/.html.liclipseprefs</strong><br/>
+            <strong>project/.javascript.liclipseprefs</strong><br/>
         <br/>
         The default file considered if none is provided is:<br/>
         <br/>
         <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
           <code style="color:#000000;word-wrap:normal;">
-    # If true, we'll show error markers for the file, 
-    # otherwise no errors will be collected nor shown.
-    collect_errors: true
-
-    # If true, the html will be fixed to be conformant 
-    # on a code format action by using: 
-    # http://about.validator.nu/htmlparser/
-    fix_html: true
-
-    # If true, code formatting will be enabled, if false 
-    # it'll be disabled.
-    enable_code_format: true
-
-    # The flags below represent properties set for the 
-    # jericho html parser. 
-    # More details at:
-    # http://jericho.htmlparser.net/docs/javadoc/net/htmlparser/jericho/SourceFormatter.html
-
-    # The indent is formed by writing n repetitions of 
-    # the string specified in the indent_string property, 
-    # where n is the depth of the indentation.
-    indent_string: '    '
-
-    # If the tidy_tags property is set to true, every tag 
-    # in the document is replaced with the output from its 
-    # Tag.tidy() method. If this property is set to false, 
-    # the tag from the original text is used, including 
-    # all white space, but with any new lines indented at 
-    # a depth one greater than that of the element.
-    tidy_tags: false
-
-
-    # If the collapse_whitespace property is set to true, 
-    #every string of one or more white space characters located 
-    # outside of a tag is replaced with a single space in 
-    # the output. White space located adjacent to a 
-    # non-inline-level element tag (except server tags) 
-    # may be removed.
-    collapse_whitespace: false
-
-    # If the indent_all_elements property is set to true, 
-    # every element appears indented on a new line, including 
-    # inline-level elements. This generates output that is
-    # a good representation of the actual document element 
-    # hierarchy, but is very likely to introduce white space
-    # that compromises the functional equivalency of the document.
-    indent_all_elements: false
+# Option determining whether syntax errors should be collected (with snakeyaml) 
+collect_errors: true
           </code></pre>
-          
-    So, it's possible to copy those contents to a .html.liclipseprefs file in the proper location
-    and change it as needed.
         
+        <br/>
+        See:<br/>
+        <a href="https://code.google.com/p/snakeyaml/wiki/Documentation#YAML_syntax">https://code.google.com/p/snakeyaml/wiki/Documentation#YAML_syntax</a><br/> 
+        for more details.
     
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
