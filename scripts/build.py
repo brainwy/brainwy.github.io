@@ -109,6 +109,7 @@ FILE_TO_INFO = pyodict.odict([
     ('spell_checking.html', Info('&nbsp;&nbsp;&nbsp;&nbsp;Spell Checking')),
     ('customize_javascript.html', Info('JavaScript editor customization')),
     ('customize_html.html', Info('HTML editor customization')),
+    ('customize_yaml.html', Info('YAML editor customization')),
 ])
 
 
