@@ -44,22 +44,13 @@ HEADER = '''
 <ul class="top2">
     <li class="lifull"><a href="download.html">Get it<strong>Download</strong></a></li>
 </ul>
-
 <ul class="top3">
-    <li class="lifull">
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NJW4VEJQZ36GJ">Help to make better<strong>Buy Single User</strong></a>
-    </li>
-</ul>
-
-<ul class="top4">
-    <li class="lifull">
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G5APKLQNXK7DL">For Organizations<strong>Buy Multi User</strong></a>
-    </li>
+    <li class="lifull"><a href="buy.html">Help to make better<strong>Buy</strong></a></li>
 </ul>
 
 
-Pricing: A LiClipse license is US$ 80<br><br><br>
-<p><small>Copyright 2013-2014 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
+<p><small>Copyright 2013-2015 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 '''
 
 #===================================================================================================
@@ -136,7 +127,7 @@ def create_manual_header():
 
     return '''
 %(li)s<br><br><br>
-<p><small>Copyright 2013-2014 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+<p><small>Copyright 2013-2015 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}
 
 if os.path.exists(help_location):
@@ -174,6 +165,7 @@ def main():
     apply_to(os.path.join(this_file_dir, 'download.html'))
     apply_to(os.path.join(this_file_dir, 'license.html'))
     apply_to(os.path.join(this_file_dir, 'faq.html'))
+    apply_to(os.path.join(this_file_dir, 'buy.html'))
     apply_to(os.path.join(this_file_dir, 'multi_edition_video.html'))
 
     if os.path.exists(help_location):
