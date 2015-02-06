@@ -45,7 +45,7 @@ HEADER = '''
     <li class="lifull"><a href="download.html">Get it<strong>Download</strong></a></li>
 </ul>
 <ul class="top3">
-    <li class="lifull"><a href="buy.html">Help to make better<strong>Buy</strong></a></li>
+    <li class="lifull"><a href="buy.html">Help to make it better<strong>Buy</strong></a></li>
 </ul>
 
 
