@@ -122,7 +122,17 @@
         See: <a href="http://support.apple.com/kb/ht3662">http://support.apple.com/kb/ht3662</a> for details.
         <br/>
         <br/>
-
+        Another note is that when you try to run LiClipse, Mac may end up asking you to install Java 6.<br/>
+        <br/>
+		Unfortunately this is an issue in Mac OS itself which is not solvable in LiClipse. Although LiClipse
+		requires Java 7 or later (so, it won't even use Java 6 if you install it), Mac will still ask you to install it.<br/>
+		<br/>
+		At this point, if you choose to install it, LiClipse will simply ignore it and will use the Java 8 that it has bundled.<br/>
+		<br/>
+		Now, if you don't want to install it, you should install at least a newer version and set it as the default one to be used:
+		<a href="http://blog.hgomez.net/blog/2012/07/20/understanding-java-from-command-line-on-osx/">http://blog.hgomez.net/blog/2012/07/20/understanding-java-from-command-line-on-osx/</a>
+		<br/>
+		<br/>
 
         <br/><hr/><h2 id="linux">Native Linux Install</h2>
 
