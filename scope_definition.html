@@ -622,6 +622,31 @@ scope_definition_rules:
 <br/>
 <br/>
 
+<strong>PrevCharNotIn</strong>:
+<ul>
+	This rule is always a 0-sized rule just to check that the previous char is not contained in any of the passed characters.<br/><br/>
+	<strong>scope</strong>: the scope which this rule defines.<br/>
+	<strong>chars</strong>: the characters that this rule can match.<br/>
+
+	<br/><strong>Example:</strong>
+	 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace;
+	                color: #000000; background-color: #eee;
+	                font-size: 12px; border: 1px dashed #999999;
+	                line-height: 14px; padding: 5px;
+	                overflow: auto; width: 100%">
+	       <code style="color:#000000;word-wrap:normal;">
+  # Single Line Strings start only if not right after a number.
+  - {type: CompositeRule, sub_rules: [
+    {type: PrevCharNotIn, scope: singleQuotedString, chars: '0123456789'}, # I.e.: we can't be inside a number
+    {type: SingleLineRule, scope: singleQuotedString, sequence: "'", escapeCharacter: \, escapeContinuesLine: true},
+  ]}
+
+</code>
+	 </pre>
+</ul>
+<br/>
+<br/>
+
 
 
                 <!-- <pre><code>$ cd your_repo_root/repo_name
