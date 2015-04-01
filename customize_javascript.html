@@ -72,21 +72,21 @@
         <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
           <code style="color:#000000;word-wrap:normal;">
  # Note that this is a YAML file with jshint_opts for JSHint in JSON format.         
- 
+
  # Option determining whether JSHint should be run 
  enable_jshint: true
- 
- 
+
+
  # Json contents to be passed to JSHint (it's passed directly as specified 
  # and may be configured based on http://www.jshint.com/docs/options/)
  jshint_opts: |-
-     {
-         "undef": true,
-         "browser": true,
-         "jquery": true
-     }
+    {
+        "undef": true,
+        "browser": true,
+        "jquery": true
+    }
           </code></pre>
-        
+
         Currently it's possible to customize whether jshint will be run by changing the value of <strong>enable_jshint</strong>
         and the options used by JSHint to do the analysis through the value of <strong>jshint_options</strong>. Note that
         JSHint also accepts comments inline in a file for configuration.<br/>
@@ -94,8 +94,8 @@
         in the top of a file.<br/>
         <br/>
         See:<br/>
-        <a href="http://www.jshint.com/docs/">http://www.jshint.com/docs</a><br/> 
-        <a href="http://www.jshint.com/docs/options">http://www.jshint.com/docs/options</a><br/> 
+        <a href="http://www.jshint.com/docs/">http://www.jshint.com/docs</a><br/>
+        <a href="http://www.jshint.com/docs/options">http://www.jshint.com/docs/options</a><br/>
         for more details.
     
                 <!-- <pre><code>$ cd your_repo_root/repo_name
