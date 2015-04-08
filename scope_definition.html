@@ -647,6 +647,33 @@ scope_definition_rules:
 <br/>
 <br/>
 
+<strong>SingleLineRuleWithSkip</strong>:
+<ul>
+	This rule would usually match a single line after some character is found and can optionally have additional rules if we need to skip some parts (such as a parenthesis that must be closed).<br/><br/>
+	<strong>scope</strong>: the scope which this rule defines.<br/>
+	<strong>start</strong>: the characters that start this rule.<br/>
+	<strong>escapeCharacter</strong>: a char used to escape the next char in the rule<br/>
+	<strong>escapeContinuesLine</strong>: If true when the escape char is found, a following new line will not terminate the pattern.<br/>
+	<strong>skipRules</strong>: The rules that should be skipped after the start sequence is found.<br/>
+
+	<br/><strong>Example:</strong>
+	 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace;
+	                color: #000000; background-color: #eee;
+	                font-size: 12px; border: 1px dashed #999999;
+	                line-height: 14px; padding: 5px;
+	                overflow: auto; width: 100%">
+	       <code style="color:#000000;word-wrap:normal;">
+  {type: SingleLineRuleWithSkip, scope: line_statement, start: '#', escapeCharacter: '\0', escapeContinuesLine: false, skipRules:[
+    {type: MultiLineRule, scope: keyword, start: '(', end: ')', escapeCharacter: '\0'},
+    {type: MultiLineRule, scope: keyword, start: '[', end: ']', escapeCharacter: '\0'},
+    {type: MultiLineRule, scope: keyword, start: '{', end: '}', escapeCharacter: '\0'},
+  ]}
+</code>
+	 </pre>
+</ul>
+<br/>
+<br/>
+
 
 
                 <!-- <pre><code>$ cd your_repo_root/repo_name
