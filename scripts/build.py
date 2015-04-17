@@ -167,6 +167,7 @@ def main():
     apply_to(os.path.join(this_file_dir, 'faq.html'))
     apply_to(os.path.join(this_file_dir, 'buy.html'))
     apply_to(os.path.join(this_file_dir, 'multi_edition_video.html'))
+    apply_to(os.path.join(this_file_dir, 'contact.html'))
 
     if os.path.exists(help_location):
         copytree(os.path.join(help_location, 'images'), os.path.join(page_dir, 'images'))
