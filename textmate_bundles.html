@@ -59,28 +59,30 @@
             </header>
             <section>
                 
-        It's possible to customize the YAML editor by creating a custom <strong>.yaml.liclipseprefs</strong> file.<br/>
-        <br/>
-        The customization must be done per-project by creating a file such as:<br/>
-        <br/>
-            <strong>project/.settings/.javascript.liclipseprefs</strong><br/>
-            <br/>
-            or<br/>
-            <br/>
-            <strong>project/.javascript.liclipseprefs</strong><br/>
-        <br/>
-        The default file considered if none is provided is:<br/>
-        <br/>
-        <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
-          <code style="color:#000000;word-wrap:normal;">
-# Option determining whether syntax errors should be collected (with snakeyaml) 
-collect_errors: true
-          </code></pre>
-        
-        <br/>
-        See:<br/>
-        <a href="https://code.google.com/p/snakeyaml/wiki/Documentation#YAML_syntax">https://code.google.com/p/snakeyaml/wiki/Documentation#YAML_syntax</a><br/> 
-        for more details.
+    	<h1>TextMate bundles integration</h1>
+    	From LiClipse 2.1.0 onwards, LiClipse also supports TextMate bundles for its language support.<br/>
+    	<br/>
+    	To install a bundle in LiClipse, download it as a zipped file, rename it to .tmbundle and place it in
+    	one of the directories tracked for language definitions.<br/>
+    	<br/>
+
+    	<img src="./images/main_preferences.png" border="0"/>
+
+    	<br/>
+    	<br/>
+    	If you want to grab a bundle available in github from the command line, go to one of the tracked directories and execute
+    	the command below (changing 'php' for the bundle name):
+		<br/>
+		<br/>
+    	<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
+    	  <code style="color:#000000;word-wrap:normal;">
+curl -L -o php.tmbundle https://github.com/textmate/php.tmbundle/archive/master.zip
+
+</code></pre>
+
+		<br/>
+		Note that in LiClipse 2.1.0, the support provided for TextMate Bundles covers only syntax highlighting and snippets where the
+		scope matches the main grammar scope. Future versions will improve on the features supported from TextMate bundles.
     
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
