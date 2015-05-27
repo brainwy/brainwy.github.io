@@ -8,6 +8,12 @@ import shutil
 import pyodict
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
+if not os.path.exists(help_location):
+    scripts = os.path.dirname(__file__)
+    liclipse_page = os.path.dirname(scripts)
+    workspace = os.path.dirname(liclipse_page)
+    help_location = os.path.join(workspace, 'liclipse', 'plugins', 'com.brainwy.liclipse.help')
+    
 
 #===================================================================================================
 # copytree
@@ -101,6 +107,7 @@ FILE_TO_INFO = pyodict.odict([
     ('customize_javascript.html', Info('JavaScript editor customization')),
     ('customize_html.html', Info('HTML editor customization')),
     ('customize_yaml.html', Info('YAML editor customization')),
+    ('textmate_bundles.html', Info('TextMate Bundles integration')),
 ])
 
 
