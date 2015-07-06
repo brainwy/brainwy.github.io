@@ -72,7 +72,13 @@
             <li>A fast editor supporting many languages out of the box. <a href="languages.html">View supported languages</a></li>
             <li>Support for TextMate Bundles. <a href="textmate_bundles.html">View TextMate Bundles Integration</a></li>
             <li>A simple way to add support for a new language</li>
-            <li>Usability improvements for all Eclipse editors (such as multiple cursors, vertical indent guides and themed scrollbars)</li>
+            <li>Usability improvements for all Eclipse editors featuring:</li>
+            <ul>
+            	<li>Multiple cursors</li>
+            	<li>Vertical indent guides</li>
+            	<li>Themed scrollbars</li>
+	            <li>Improved text search experience (with Lucene index-based searching, support for external folders, open editors and additional filtering on results page)</li>
+            </ul>
             <li>Native installers</li>
             <li>
                 Improved theming support based on Eclipse 4 improvements<br/>
@@ -81,32 +87,24 @@
             </li>
         </ul>
 
-        <h3>Release Highlights for LiClipse 2.1.0</h3>
+        <h3>Release Highlights for LiClipse 2.2.0</h3>
         <ul>
-            <li>Support for <a href="textmate_bundles.html">TextMate Bundles</a></li>
-            <li>PHP is now supported</li>
-            <li>Ruby is now supported</li>
-            <li>Markdown is now supported</li>
-            <li>Standalone now based on Eclipse 4.5</li>
-            <li>Updated EGit and PyDev</li>
+			<li>Improved text search</li>
+			<ul>
+				<li>Workspace searches based on Lucene indexes.</li>
+				<li>Provides a way to searche in external folders.</li>
+				<li>Provides a way to search open editors.</li>
+				<li>Results search page allows additional filtering based on paths.</li>
+			</ul>
+			<li>Linux Shell files supported.</li>
+			<li>Windows bat files supported.</li>
+			<li>PERL is now supported.</li>
+			<li>Swift is now supported.</li>
+			<li>New view to explore LiClipse languages.</li>
+			<li>New view which shows the partitions for the current file to help when creating a language.</li>
+			<li>Improved performance in partitioning.</li>
+			<li>GTK 2 is set as the the default backend in Linux</li>
         </ul>
-        
-        <h3>Release Highlights for LiClipse 2.0.0</h3>
-       	<ul>
-       		<li>Nim is now supported</li>
-       		<li>Go is now supported</li>
-       		<li>Jinja2 is now supported</li>
-   			<li>JavaScript editor:</li>
-       		<ul>
-	       		<li>It's possible to specify the jshint.js and beautify.js location in preferences > LiClipse > Javascript</li>
-	       		<li>The code-formatting settings may be tweaked (see: <a href="customize_javascript.html">Customize Javascript</a> for details</li>
-	       		<li>Fixed some syntax highlighting glitches (related to handling of Regular expressions)</li>
-	       		<li>Added some missing keywords to the JavaScript definition</li>
-       		</ul>
-       		<li>Mako had some improvements in the highlighting</li>
-       		<li>Multi-page editors (such as the plugins manifest editor) now also have multiple cursors and vertical indent guides support</li>
-       		<li>Updated EGit, PyDev and AnyEdit</li>
-       	</ul>
 
         <p><a href="history.html">View highlights for previous releases</a></p>
         <p>Supported languages feature syntax highlighting, template completion,
