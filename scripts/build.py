@@ -13,7 +13,7 @@ if not os.path.exists(help_location):
     liclipse_page = os.path.dirname(scripts)
     workspace = os.path.dirname(liclipse_page)
     help_location = os.path.join(workspace, 'liclipse', 'plugins', 'com.brainwy.liclipse.help')
-    
+
 
 #===================================================================================================
 # copytree
@@ -98,6 +98,7 @@ class Info:
 FILE_TO_INFO = pyodict.odict([
     ('change_color_theme.html', Info('Changing colors')),
     ('launch.html', Info('Running/Launching')),
+    ('search.html', Info('Improved Search')),
     ('supported_languages.html', Info('Language Support')),
     ('scope_definition.html', Info('&nbsp;&nbsp;&nbsp;&nbsp;Language Scopes')),
     ('ctags.html', Info('&nbsp;&nbsp;&nbsp;&nbsp;Ctags')),

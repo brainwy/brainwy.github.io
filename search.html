@@ -60,26 +60,28 @@
             </header>
             <section>
                 
-<h1>Change Color Theme</h1>
-To change the color theme on LiClipse, access window > Preferences > General > Appearance > Color theme<br/>
-<br/>
+    	LiClipse provides improved search capabilities to Eclipse by using Lucene for text based searches, besides providing searches
+    	on different scopes, such as searching in <strong>external folders</strong> and <strong>open editors</strong>.<br/>
+    	<br/>
+    	The image below shows the search dialog (activated through <strong>Ctrl + H</strong>), where it's possible to select what/where to search. The path(s) and project(s) are updated
+    	when a search is requested based on the current selection.<br/>
+    	<br/>
+    	<img src="./images/search/search_dialog.png" border="0"/>
+    	<br/>
+    	<br/>
+    	It's interesting to note that the index is built (and checked for consistency) <strong>on-the-fly when a text search is requested</strong>, which
+    	means that the indexing won't add any overhead on the build process (although that means that the first time some scope is
+    	searched it may take a bit more time to build the indexes -- which should be comparable to a regular text search on Eclipse --
+    	so that subsequent calls are nearly instant).<br/>
+    	<br/>
+    	The search results page also offers additional flexibility, which allows <strong>grouping the matches</strong> in different ways -- they can be flattened,
+    	grouped by project, folder or files -- and <strong>filtering the results based on the paths</strong> (multiple terms may be comma-separated and "!" can
+    	be used in the beggining of the term to exclude matches).<br/>
+    	<br/>
+    	<img src="./images/search/search_results.png" border="0"/>
+    	<br/>
 
-<img src="./images/change_color_theme/preferences.png" border="0"/>
-<br/>
-<br/>
-There's a combo where it's possible to select how those changes will be applied to editors:
-<ul>
-	<li><strong>Apply only to LiClipse editors</strong>: When enabled, the theme selected will be applied only to LiClipse editors, not to other editors (such as PyDev, JDT, etc.) nor views.</li>
-	<li><strong>Apply to all editors</strong>: When enabled, the theme selected will be applied to all the editors (such as PyDev, JDT, etc.) but not to any view.</li>
-	<li><strong>Apply to all editors and known views</strong>: When selected, all the parts known about will be themed (editor and views checked for themeing), but it won't apply the theme to views that haven't been registered.</li>
-	<li><strong>Apply to the whole IDE</strong>: This option will apply the theme to all views and dialogs in the IDE without restriction -- although most views and dialogs should work, it's possible that some dialog wasn't meant to be themed, which would make its appearance look bad in this case.</li>
-</ul>
-
-<br/>
-Note that if you choose the options to apply to all the known views / apply to the whole IDE, you
-may have to restart Eclipse for changes to be successful.
-
-
+    
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
                     $ git checkout gh-pages
