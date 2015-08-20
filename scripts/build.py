@@ -109,6 +109,7 @@ FILE_TO_INFO = pyodict.odict([
     ('customize_html.html', Info('HTML editor customization')),
     ('customize_yaml.html', Info('YAML editor customization')),
     ('textmate_bundles.html', Info('TextMate Bundles integration')),
+    ('preview.html', Info('HTML Preview')),
 ])
 
 
