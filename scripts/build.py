@@ -43,7 +43,7 @@ HEADER = '''
     View the Project on GitHub <small>brainwy/liclipse.page</small></a></p> -->
 <ul class="top1">
     <!-- <li><a href="http://???">Get It <strong>Download</strong></a></li> -->
-    <li><a href="https://groups.google.com/forum/#!forum/liclipse">Googlegroups <strong>Forum</strong></a></li>
+    <li><a href="contact.html">Get in <strong>Contact</strong></a></li>
     <li><a href="http://liclipse.blogspot.com.br/">View <strong>Blog</strong></a></li>
     <li><a href="https://sw-brainwy.rhcloud.com/tracker/LiClipse/">LiClipse<strong>Tracker</strong></a></li>
 </ul>
@@ -56,7 +56,7 @@ HEADER = '''
 
 
 
-<p><small>Copyright 2013-2015 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+<p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 '''
 
 #===================================================================================================
@@ -136,7 +136,7 @@ def create_manual_header():
 
     return '''
 %(li)s<br><br><br>
-<p><small>Copyright 2013-2015 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+<p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}
 
 if os.path.exists(help_location):
