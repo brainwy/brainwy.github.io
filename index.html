@@ -88,6 +88,26 @@
             </li>
         </ul>
 
+        <h3>Release Highlights for LiClipse 3.0.1</h3>
+        <ul>
+        	<li>Based on <strong>Eclipse 4.6 M7</strong></li>
+        	<li>Requires <strong>Java 8</strong> to run</li>
+        	<li>Fixed scrollbar issue on Git Staging view</li>
+        	<li>JavaScript editor using Nashorn instead of Rhino for JSLint and Beautify.js</li>
+        	<ul>
+        		<li>Note that JSLint doesn't officially support Nashorn, so, a patched version is needed.</li>
+        		<li>Nashorn is <strong>much</strong> faster than Rhino, so, opening a big file to be linted should no longer halt the IDE.</li>
+        	</ul>
+        	<li>Removed scrollbar theming from trees and tables due to some bugs (users that want can still enable it
+        		by installing <a href="http://fappel.github.io/xiliary/clean-sheet.html">Xiliary</a> and enabling the related
+        		setting at at General > Appearance > Color Theme).</li>
+        	<li>Updated PyDev to 5.0.0</li>
+        	<ul>
+        		<li>Improvements in debugger, PyUnit view persist across restart, super() code completion and wrap expression deadlock fix.</li>
+        	</ul>
+        	<li>Updated EGit</li>
+        </ul>
+
         <h3>Release Highlights for LiClipse 2.5.4</h3>
         <ul>
         	<li>Updated PyDev to 4.5.5</li>
@@ -96,49 +116,6 @@
         	</ul>
         	<li>Accepting hyphen for tags/attributes in XML editor</li>
         	<li>Themed ScrollBar disabled by default for Trees/Tables (can be manually enabled at General > Appearance > Color Theme)</li>
-        </ul>
-        <h3>Release Highlights for LiClipse 2.5.3</h3>
-        <ul>
-        	<li>Updated PyDev to 4.5.4 (it had a critical fix in debugger)</li>
-        </ul>
-
-        <h3>Release Highlights for LiClipse 2.5.2</h3>
-        <ul>
-        	<li>The trees and tables now have styled scrollbars when using the LiClipse theme (using <a href="http://fappel.github.io/xiliary/clean-sheet.html">Xiliary</a> scrollbar enhancements).</li>
-        	<li>CSS and SCSS languages use textmate bundles for highlighting</li>
-        	<li>Updated PyDev to 4.5.3 (fixes in debugger and improvements in the PyUnit view)</li>
-        	<li>Updated Eclipse to 4.5.1</li>
-        	<li>Updated Startexplorer to 1.7.0</li>
-        </ul>
-
-        <h3>Release Highlights for LiClipse 2.5.1</h3>
-        <ul>
-        	<li>The comment prefix now works properly for TextMate based languages</li>
-        	<li>Fixed issue handling TextMate rule which affected the Ruby syntax highlighting</li>
-        	<li>Updated to PyDev 4.5.1</li>
-        	<li>Updated EGit</li>
-        </ul>
-
-        <h3>Release Highlights for LiClipse 2.4.0</h3>
-        <ul>
-        	<li>Fixed critical issue where indent rules were being applied without a new line on textmate bundles</li>
-        	<li>Added RAML editor support</li>
-        	<li>Updated to PyDev 4.4.0</li>
-        </ul>
-
-        <h3>Release Highlights for LiClipse 2.3.0</h3>
-        <ul>
-			<li>Improvements on the parsing structure, resulting in:</li>
-			<ul>
-				<li>Improved performance on syntax highlighting and outline creation.</li>
-				<li>Scopes from TextMate rules are properly kept
-					(so, code-completion now works for more TextMate languages).</li>
-			</ul>
-			<li>A new view which shows an <a href="preview.html">HTML preview</a> for the <strong>HTML</strong>,
-				<strong>Markdown</strong> and <strong>RST editors</strong>
-				(it can be activated in Window > Show View > Other > LiClipse > LiClipse HTML Preview, or
-				by using Ctrl+3 > LiClipse HTML Preview)</li>
-			<li>The new <a href="search.html">search</a> had some bugs ironed out.</li>
         </ul>
 
         <p><a href="history.html">View highlights for previous releases</a></p>
