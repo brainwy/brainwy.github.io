@@ -31,7 +31,7 @@ def copytree(src, dst, symlinks=False, ignore=None):
                 shutil.copy2(s, d)
 
 
-template_contents = open(os.path.join(os.path.dirname(__file__), 'template.html'), 'r').read()
+default_template_contents = open(os.path.join(os.path.dirname(__file__), 'template.html'), 'r').read()
 this_file_dir = os.path.dirname(__file__)
 page_dir = os.path.dirname(this_file_dir)
 
@@ -62,21 +62,35 @@ HEADER = '''
 #===================================================================================================
 # apply_to
 #===================================================================================================
-def apply_to(filename, header=None):
+def apply_to(filename, header=None, path=None, template_contents=None, kwargs=None):
     with open(filename, 'r') as stream:
         contents = stream.read()
         body = extract(contents, 'body')
-        apply_to_contents(contents, os.path.basename(filename), body, header or HEADER)
+        apply_to_contents(contents, os.path.basename(filename), body, header or HEADER, path=path, template_contents=template_contents, kwargs=kwargs)
 
+def template_replace(contents, kwargs):
+    to_replace = ['title', 'image_area', 'quote_area', 'right_area', 'contents_area']
+
+    for r in to_replace:
+        c = kwargs.get(r, '')
+        contents = contents.replace('%(' + r + ')s', c)
+    return contents
 
 #===================================================================================================
 # apply_to_contents
 #===================================================================================================
-def apply_to_contents(contents, basename, body, header):
+def apply_to_contents(contents, basename, body, header, path, template_contents, kwargs=None):
+    if kwargs is None:
+        kwargs = {}
+    kwargs.update({'body': body, 'header': header})
 
-    contents = template_contents % {'body': body, 'header': header}
+    contents = template_replace((template_contents or default_template_contents), kwargs)
 
-    with open(os.path.join(page_dir, basename), 'w') as out_stream:
+    if path:
+        filename = os.path.join(page_dir, path, basename)
+    else:
+        filename = os.path.join(page_dir, basename)
+    with open(filename, 'w') as out_stream:
         out_stream.write(contents)
 
 
@@ -153,7 +167,7 @@ def create_manual_page():
     manual_body = '''
 <h3>Choose the topic you're interested in...</h3>
 '''
-    apply_to_contents(manual_body, 'manual.html', manual_body, MANUAL_HEADER)
+    apply_to_contents(manual_body, 'manual.html', manual_body, MANUAL_HEADER, None, None)
 
 
 
@@ -177,6 +191,16 @@ def main():
     apply_to(os.path.join(this_file_dir, 'buy.html'))
     apply_to(os.path.join(this_file_dir, 'multi_edition_video.html'))
     apply_to(os.path.join(this_file_dir, 'contact.html'))
+
+    with open(os.path.join(this_file_dir, 'text', '_template.html')) as stream:
+        text_template_contents = stream.read()
+
+    apply_to(
+        os.path.join(this_file_dir, 'text', 'index.html'),
+        path='text',
+        template_contents=text_template_contents,
+        kwargs={'title': 'LiClipseText'}
+    )
 
     if os.path.exists(help_location):
         copytree(os.path.join(help_location, 'images'), os.path.join(page_dir, 'images'))

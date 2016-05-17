@@ -27,7 +27,7 @@
         <!-- end tracking -->
 
         <div>
-            <div class="top_header_outer" style="top: 0px; left: 0px; width:100%; background-color:white; border-bottom: 1px solid black;">
+            <div class="top_header_outer" style="top: 0px; left: 0px; width:100%%; background-color:white; border-bottom: 1px solid black;">
             	<div class="top_header">
 	                <a href="index.html">Main</a>
 	                <a href="faq.html" style="padding-left:1.5em;">FAQ</a>
@@ -41,89 +41,10 @@
         </div>
         <div class="wrapper">
             <header>
-                
-<p><a href="change_color_theme.html">Changing colors</a></p>
-<p><a href="launch.html">Running/Launching</a></p>
-<p><a href="search.html">Improved Search</a></p>
-<p><a href="supported_languages.html">Language Support</a></p>
-<p><a href="scope_definition.html">&nbsp;&nbsp;&nbsp;&nbsp;Language Scopes</a></p>
-<p><a href="ctags.html">&nbsp;&nbsp;&nbsp;&nbsp;Ctags</a></p>
-<p><a href="indent.html">&nbsp;&nbsp;&nbsp;&nbsp;Specifying indentation</a></p>
-<p><a href="templates.html">&nbsp;&nbsp;&nbsp;&nbsp;Templates</a></p>
-<p><a href="spell_checking.html">&nbsp;&nbsp;&nbsp;&nbsp;Spell Checking</a></p>
-<p><a href="customize_javascript.html">JavaScript editor customization</a></p>
-<p><a href="customize_html.html">HTML editor customization</a></p>
-<p><a href="customize_yaml.html">YAML editor customization</a></p>
-<p><a href="textmate_bundles.html">TextMate Bundles integration</a></p>
-<p><a href="preview.html">HTML Preview</a></p><br><br><br>
-<p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-
+                %(header)s
             </header>
             <section>
-                
-        It's possible to customize the JavaScript editor JSHint/Beautify.js integration by creating a custom <strong>.javascript.liclipseprefs</strong> file.<br/>
-        <br/>
-        Note: if you wish to use a different jshint.js/beautify.js, you can specify the location to be used in preferences > LiClipse > Javascript.<br/>
-        <br/>
-        As for the customization of JSHint/Beautify.js, it must be done per-project by creating a file such as:<br/>
-        <br/>
-            <strong>project/.settings/.javascript.liclipseprefs</strong><br/>
-            <br/>
-            or<br/>
-            <br/>
-            <strong>project/.javascript.liclipseprefs</strong><br/>
-        <br/>
-        The default file considered if none is provided is:<br/>
-        <br/>
-        <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
-          <code style="color:#000000;word-wrap:normal;">
-# Note that this is a YAML file with jshint_opts for JSHint in JSON format.
-
-# Option determining whether JSHint should be run
-enable_jshint: true
-
-
-# Json contents to be passed to JSHint (it's passed directly as specified
-# and may be configured based on http://www.jshint.com/docs/options/)
-jshint_opts: |-
-    {
-        "undef": true,
-        "browser": true,
-        "jquery": true
-    }
-
-# Option determining whether code-formatting (Ctrl+Shift+F) is enabled.
-enable_beautify_js: true
-
-# Json contents to be passed to beautify.js (it's passed directly as specified
-# and may be configured based on https://github.com/beautify-web/js-beautify)
-beautify_js_opts: |-
-    {
-        "indent_size": 4,
-        "indent_char": " ",
-        "preserve_newlines": true,
-        "max_preserve_newlines": 2147483647,
-        "jslint_happy": false,
-        "space_after_anon_function": false,
-        "brace_style":  "collapse",
-        "space_before_conditional": true,
-        "unescape_strings": false,
-        "wrap_line_length": 2147483647,
-        "end_with_newline":false
-    }
-          </code></pre>
-
-        Currently it's possible to customize whether jshint will be run by changing the value of <strong>enable_jshint</strong>
-        and the options used by JSHint to do the analysis through the value of <strong>jshint_options</strong>. Note that
-        JSHint also accepts comments inline in a file for configuration.<br/>
-        <br/>E.g.:<br/><strong>/* jshint undef: true, unused: true */</strong><br/>
-        in the top of a file.<br/>
-        <br/>
-        See:<br/>
-        <a href="http://www.jshint.com/docs/">http://www.jshint.com/docs</a><br/>
-        <a href="http://www.jshint.com/docs/options">http://www.jshint.com/docs/options</a><br/>
-        for more details.
-    
+                %(body)s
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
                     $ git checkout gh-pages

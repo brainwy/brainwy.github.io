@@ -27,7 +27,7 @@
         <!-- end tracking -->
 
         <div>
-            <div class="top_header_outer" style="top: 0px; left: 0px; width:100%; background-color:white; border-bottom: 1px solid black;">
+            <div class="top_header_outer" style="top: 0px; left: 0px; width:100%%; background-color:white; border-bottom: 1px solid black;">
             	<div class="top_header">
 	                <a href="index.html">Main</a>
 	                <a href="faq.html" style="padding-left:1.5em;">FAQ</a>
@@ -41,46 +41,10 @@
         </div>
         <div class="wrapper">
             <header>
-                
-<p><a href="change_color_theme.html">Changing colors</a></p>
-<p><a href="launch.html">Running/Launching</a></p>
-<p><a href="search.html">Improved Search</a></p>
-<p><a href="supported_languages.html">Language Support</a></p>
-<p><a href="scope_definition.html">&nbsp;&nbsp;&nbsp;&nbsp;Language Scopes</a></p>
-<p><a href="ctags.html">&nbsp;&nbsp;&nbsp;&nbsp;Ctags</a></p>
-<p><a href="indent.html">&nbsp;&nbsp;&nbsp;&nbsp;Specifying indentation</a></p>
-<p><a href="templates.html">&nbsp;&nbsp;&nbsp;&nbsp;Templates</a></p>
-<p><a href="spell_checking.html">&nbsp;&nbsp;&nbsp;&nbsp;Spell Checking</a></p>
-<p><a href="customize_javascript.html">JavaScript editor customization</a></p>
-<p><a href="customize_html.html">HTML editor customization</a></p>
-<p><a href="customize_yaml.html">YAML editor customization</a></p>
-<p><a href="textmate_bundles.html">TextMate Bundles integration</a></p>
-<p><a href="preview.html">HTML Preview</a></p><br><br><br>
-<p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-
+                %(header)s
             </header>
             <section>
-                
-    	<h3>HTML preview</h3>
-    	In LiClipse, it's possible to see an HTML preview for the <strong>HTML</strong>,
-		<strong>Markdown</strong> and <strong>RST editors</strong>
-		(it can be activated in <strong>Window > Show View > Other > LiClipse > LiClipse HTML Preview</strong>, or
-		by using <strong>Ctrl+3 > LiClipse HTML Preview</strong>).<br/>
-		<br/>
-		To work properly for RST and Markdown, it requires that <a href="http://pandoc.org/">Pandoc</a> is installed and
-		available in the PATH (note that after installing it and adding it to the PATH, LiClipse must be restarted to
-		pick up the changes to the PATH environment variable).<br/>
-		<br/>
-		After the view is shown, it'll update automatically when a new editor
-		is focused and after text is changed in the editor.<br/>
-		<br/>
-		Image showing the HTML preview (note that all references -- such
-		as css, images, etc -- must be relative to the file being currently edited to appear properly):<br/>
-		<br/>
-		<img src="images/preview.png"/>
-
-
-    
+                %(body)s
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
                     $ git checkout gh-pages

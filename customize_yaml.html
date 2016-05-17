@@ -27,7 +27,7 @@
         <!-- end tracking -->
 
         <div>
-            <div class="top_header_outer" style="top: 0px; left: 0px; width:100%; background-color:white; border-bottom: 1px solid black;">
+            <div class="top_header_outer" style="top: 0px; left: 0px; width:100%%; background-color:white; border-bottom: 1px solid black;">
             	<div class="top_header">
 	                <a href="index.html">Main</a>
 	                <a href="faq.html" style="padding-left:1.5em;">FAQ</a>
@@ -41,49 +41,10 @@
         </div>
         <div class="wrapper">
             <header>
-                
-<p><a href="change_color_theme.html">Changing colors</a></p>
-<p><a href="launch.html">Running/Launching</a></p>
-<p><a href="search.html">Improved Search</a></p>
-<p><a href="supported_languages.html">Language Support</a></p>
-<p><a href="scope_definition.html">&nbsp;&nbsp;&nbsp;&nbsp;Language Scopes</a></p>
-<p><a href="ctags.html">&nbsp;&nbsp;&nbsp;&nbsp;Ctags</a></p>
-<p><a href="indent.html">&nbsp;&nbsp;&nbsp;&nbsp;Specifying indentation</a></p>
-<p><a href="templates.html">&nbsp;&nbsp;&nbsp;&nbsp;Templates</a></p>
-<p><a href="spell_checking.html">&nbsp;&nbsp;&nbsp;&nbsp;Spell Checking</a></p>
-<p><a href="customize_javascript.html">JavaScript editor customization</a></p>
-<p><a href="customize_html.html">HTML editor customization</a></p>
-<p><a href="customize_yaml.html">YAML editor customization</a></p>
-<p><a href="textmate_bundles.html">TextMate Bundles integration</a></p>
-<p><a href="preview.html">HTML Preview</a></p><br><br><br>
-<p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-
+                %(header)s
             </header>
             <section>
-                
-        It's possible to customize the YAML editor by creating a custom <strong>.yaml.liclipseprefs</strong> file.<br/>
-        <br/>
-        The customization must be done per-project by creating a file such as:<br/>
-        <br/>
-            <strong>project/.settings/.javascript.liclipseprefs</strong><br/>
-            <br/>
-            or<br/>
-            <br/>
-            <strong>project/.javascript.liclipseprefs</strong><br/>
-        <br/>
-        The default file considered if none is provided is:<br/>
-        <br/>
-        <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
-          <code style="color:#000000;word-wrap:normal;">
-# Option determining whether syntax errors should be collected (with snakeyaml) 
-collect_errors: true
-          </code></pre>
-        
-        <br/>
-        See:<br/>
-        <a href="https://code.google.com/p/snakeyaml/wiki/Documentation#YAML_syntax">https://code.google.com/p/snakeyaml/wiki/Documentation#YAML_syntax</a><br/> 
-        for more details.
-    
+                %(body)s
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
                     $ git checkout gh-pages
