@@ -2,6 +2,10 @@
 Created on Sep 3, 2013
 
 @author: Fabio
+
+Also in:
+    http://liclipse-sagi.rhcloud.com
+    http://brainwy.github.io
 '''
 import os
 import shutil
@@ -198,6 +202,9 @@ def main():
     apply_to(os.path.join(this_file_dir, 'text', 'index.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'LiClipseText'})
     apply_to(os.path.join(this_file_dir, 'text', 'about.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'About'})
     apply_to(os.path.join(this_file_dir, 'text', 'download.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Download'})
+    apply_to(os.path.join(this_file_dir, 'text', 'manual.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Manual'})
+    apply_to(os.path.join(this_file_dir, 'text', 'screenshots.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Screenshots'})
+    apply_to(os.path.join(this_file_dir, 'text', 'developers.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Developers'})
 
     if os.path.exists(help_location):
         copytree(os.path.join(help_location, 'images'), os.path.join(page_dir, 'images'))
