@@ -69,7 +69,7 @@ def apply_to(filename, header=None, path=None, template_contents=None, kwargs=No
         apply_to_contents(contents, os.path.basename(filename), body, header or HEADER, path=path, template_contents=template_contents, kwargs=kwargs)
 
 def template_replace(contents, kwargs):
-    to_replace = ['title', 'image_area', 'quote_area', 'right_area', 'contents_area']
+    to_replace = ['title', 'image_area', 'quote_area', 'right_area', 'contents_area', 'body', 'header']
 
     for r in to_replace:
         c = kwargs.get(r, '')
@@ -195,12 +195,9 @@ def main():
     with open(os.path.join(this_file_dir, 'text', '_template.html')) as stream:
         text_template_contents = stream.read()
 
-    apply_to(
-        os.path.join(this_file_dir, 'text', 'index.html'),
-        path='text',
-        template_contents=text_template_contents,
-        kwargs={'title': 'LiClipseText'}
-    )
+    apply_to(os.path.join(this_file_dir, 'text', 'index.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'LiClipseText'})
+    apply_to(os.path.join(this_file_dir, 'text', 'about.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'About'})
+    apply_to(os.path.join(this_file_dir, 'text', 'download.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Download'})
 
     if os.path.exists(help_location):
         copytree(os.path.join(help_location, 'images'), os.path.join(page_dir, 'images'))

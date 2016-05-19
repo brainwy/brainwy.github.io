@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Standalone install</h1>
+        <p>LiClipseText is available in <strong>LiClipse</strong>, which provides a hassle free (and OS-native) experience to install it.</p>
+        <p><strong>Note that by supporting LiClipse you also directly support the development LiClipseText itself.</strong></p>
+        <p>See the <a href="about.html">About</a> for the differences from <a href="http://www.liclipse.com/">LiClipse</a> to LiClipseText.</p>
+        <p>See the <a href="http://www.liclipse.com/">LiClipse homepage</a> for details on getting it.</p>
+        <h1>Requirements</h1>
+        <ul class="simple">
+            <li><a class="reference external" href="http://www.javasoft.com/">Java</a> 8: <strong>Important</strong>: If you don't have java 8, the update process may appear to succeed, but LiClipseText will simply not show in the target installation. See <a class="reference internal" href="#liclipsetext-does-not-appear-after-install">LiClipseText does not appear after install!</a> below for details on how to fix that.</li>
+            <li><a class="reference external" href="http://www.eclipse.org/">Eclipse (3.8/4.3 onwards)</a></li>
+        </ul>
+        <p><strong>Note</strong> if using Eclipse standalone, LiClipseText
+            requires only the <a class="reference external" href="http://download.eclipse.org/eclipse/downloads/">Platform Runtime
+            Binary</a> (download around 67 MB).
+        </p>
+        <div class="section" id="liclipsetext-does-not-appear-after-install">
+            <h1>LiClipseText does not appear after install!</h1>
+            <p>Well, the main issue at this time is that LiClipseText requires Java 8 in order to run. So, if you don't want to support LiClipseText by
+                going the LiClipse route (which has LiClipseText plus other goodies), you may have to go through some loops to
+                make sure that you're actually using Java 8 to run Eclipse/LiClipseText (as explained below).
+            </p>
+            <div class="section" id="all-oses">
+                <h2>All OSes</h2>
+                <p>Make sure you download/install the latest Java 8 JRE or JDK, try restarting to see if it got it automatically.</p>
+                <p>I.e.: in <strong>help &gt; about &gt; installation details &gt; configuration</strong> check if it's actually using the java 8 version you pointed at.</p>
+                <p>If it didn't get it automatically, follow the instructions from:</p>
+                <p><a class="reference external" href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a> to add the -vm argument to eclipse.ini on "Specifying the JVM" to specify the java 8 vm (this should also be used in case you just extracted java and didn't override the default system installation).</p>
+                <p><strong>Note on Mac OS</strong>: You can use the command "/usr/libexec/java_home -v 1.8" to get the base path for the JVM (though you also need to append "/bin/java" to the output of said command to the -vm arg in eclipse.ini).</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>

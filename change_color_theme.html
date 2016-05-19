@@ -41,10 +41,46 @@
         </div>
         <div class="wrapper">
             <header>
-                %(header)s
+                
+<p><a href="change_color_theme.html">Changing colors</a></p>
+<p><a href="launch.html">Running/Launching</a></p>
+<p><a href="search.html">Improved Search</a></p>
+<p><a href="supported_languages.html">Language Support</a></p>
+<p><a href="scope_definition.html">&nbsp;&nbsp;&nbsp;&nbsp;Language Scopes</a></p>
+<p><a href="ctags.html">&nbsp;&nbsp;&nbsp;&nbsp;Ctags</a></p>
+<p><a href="indent.html">&nbsp;&nbsp;&nbsp;&nbsp;Specifying indentation</a></p>
+<p><a href="templates.html">&nbsp;&nbsp;&nbsp;&nbsp;Templates</a></p>
+<p><a href="spell_checking.html">&nbsp;&nbsp;&nbsp;&nbsp;Spell Checking</a></p>
+<p><a href="customize_javascript.html">JavaScript editor customization</a></p>
+<p><a href="customize_html.html">HTML editor customization</a></p>
+<p><a href="customize_yaml.html">YAML editor customization</a></p>
+<p><a href="textmate_bundles.html">TextMate Bundles integration</a></p>
+<p><a href="preview.html">HTML Preview</a></p><br><br><br>
+<p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
             </header>
             <section>
-                %(body)s
+                
+<h1>Change Color Theme</h1>
+To change the color theme on LiClipse, access window > Preferences > General > Appearance > Color theme<br/>
+<br/>
+
+<img src="./images/change_color_theme/preferences.png" border="0"/>
+<br/>
+<br/>
+There's a combo where it's possible to select how those changes will be applied to editors:
+<ul>
+	<li><strong>Apply only to LiClipse editors</strong>: When enabled, the theme selected will be applied only to LiClipse editors, not to other editors (such as PyDev, JDT, etc.) nor views.</li>
+	<li><strong>Apply to all editors</strong>: When enabled, the theme selected will be applied to all the editors (such as PyDev, JDT, etc.) but not to any view.</li>
+	<li><strong>Apply to all editors and known views</strong>: When selected, all the parts known about will be themed (editor and views checked for themeing), but it won't apply the theme to views that haven't been registered.</li>
+	<li><strong>Apply to the whole IDE</strong>: This option will apply the theme to all views and dialogs in the IDE without restriction -- although most views and dialogs should work, it's possible that some dialog wasn't meant to be themed, which would make its appearance look bad in this case.</li>
+</ul>
+
+<br/>
+Note that if you choose the options to apply to all the known views / apply to the whole IDE, you
+may have to restart Eclipse for changes to be successful.
+
+
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
                     $ git checkout gh-pages

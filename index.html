@@ -41,10 +41,107 @@
         </div>
         <div class="wrapper">
             <header>
-                %(header)s
+                
+<h1 class="header_liclipse">LiClipse</h1>
+<p>Lightweight editors, theming and usability improvements for Eclipse</p>
+<!-- <p class="view"><a href="https://github.com/brainwy/liclipse.page">
+    View the Project on GitHub <small>brainwy/liclipse.page</small></a></p> -->
+<ul class="top1">
+    <!-- <li><a href="http://???">Get It <strong>Download</strong></a></li> -->
+    <li><a href="contact.html">Get in <strong>Contact</strong></a></li>
+    <li><a href="http://liclipse.blogspot.com.br/">View <strong>Blog</strong></a></li>
+    <li><a href="https://sw-brainwy.rhcloud.com/tracker/LiClipse/">LiClipse<strong>Tracker</strong></a></li>
+</ul>
+<ul class="top2">
+    <li class="lifull"><a href="download.html">Get it<strong>Download</strong></a></li>
+</ul>
+<ul class="top3">
+    <li class="lifull"><a href="buy.html">Help to make it better<strong>Buy</strong></a></li>
+</ul>
+
+
+
+<p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
             </header>
             <section>
-                %(body)s
+                
+        <h3>LiClipse provides a new experience for Eclipse users</h3>
+        <p>With it, users get out of the box:</p>
+        <ul>
+            <li>A fast editor supporting many languages out of the box. <a href="languages.html">View supported languages</a></li>
+            <li>Support for TextMate Bundles. <a href="textmate_bundles.html">View TextMate Bundles Integration</a></li>
+            <li>A simple way to add support for a new language</li>
+            <li>Usability improvements for all Eclipse editors featuring:</li>
+            <ul>
+            	<li><a href="multi_edition_video.html">Multiple cursors</a></li>
+            	<li>Vertical indent guides</li>
+            	<li>Themed scrollbars</li>
+	            <li>Improved <a href="search.html">text search capabilities</a> (with Lucene index-based searching, support for external folders, open editors and additional filtering on results page)</li>
+            </ul>
+            <li><a href="preview.html">HTML preview</a> for the RST, Markdown and HTML editors</li>
+            <li>Native installers</li>
+            <li>
+                Improved theming support based on Eclipse 4 improvements<br/>
+                <br/>
+                <p><img src="images/theming.png"></p>
+            </li>
+        </ul>
+
+        <h3>Release Highlights for LiClipse 3.0.1</h3>
+        <ul>
+        	<li>Based on <strong>Eclipse 4.6 M7</strong></li>
+        	<li>Requires <strong>Java 8</strong> to run</li>
+        	<li>Fixed scrollbar issue on Git Staging view</li>
+        	<li>JavaScript editor using Nashorn instead of Rhino for JSHint and Beautify.js</li>
+        	<ul>
+        		<li>Note that JSHint doesn't officially support Nashorn, so, a patched version is needed.</li>
+        		<li>Nashorn is <strong>much</strong> faster than Rhino, so, opening a big file to be linted should no longer halt the IDE.</li>
+        	</ul>
+        	<li>Removed scrollbar theming from trees and tables due to some bugs (users that want can still enable it
+        		by installing <a href="http://fappel.github.io/xiliary/clean-sheet.html">Xiliary</a> and enabling the related
+        		setting at at General > Appearance > Color Theme).</li>
+        	<li>Updated PyDev to 5.0.0</li>
+        	<ul>
+        		<li>Improvements in debugger, PyUnit view persist across restart, super() code completion and wrap expression deadlock fix.</li>
+        	</ul>
+        	<li>Updated EGit</li>
+        </ul>
+
+        <h3>Release Highlights for LiClipse 2.5.4</h3>
+        <ul>
+        	<li>Updated PyDev to 4.5.5</li>
+        	<ul>
+        		<li>Improvements in code-completion, pytest integration, python 3 parsing, debugger and django tests running</li>
+        	</ul>
+        	<li>Accepting hyphen for tags/attributes in XML editor</li>
+        	<li>Themed ScrollBar disabled by default for Trees/Tables (can be manually enabled at General > Appearance > Color Theme)</li>
+        </ul>
+
+        <p><a href="history.html">View highlights for previous releases</a></p>
+        <p>Supported languages feature syntax highlighting, template completion,
+            outline, select/deselect scope, comment/uncomment, auto-indent, linked edition,
+            multi-edition, mark occurrences, among others.
+        </p>
+        <p>As a note, some editors have <strong>improved support:</strong></p>
+        <p>The HTML editor has advanced context-based code-completion</p>
+        <p>The HTML, XML and JavaScript editors have code-analysis and code-formatting features</p>
+        <h3>Usability improvements for all Eclipse editors</h3>
+        <p>At this point, the major improvement is multi-edition and vertical indent guides, supporting all editors
+            (such as PyDev, JDT, etc).
+        </p>
+        <p>See: <a href="multi_edition_video.html">Multi-Edition Video</a> for details</p>
+        <p>Besides the multi-edition (which can be triggered in a Ctrl+K search or with the mouse with
+            Ctrl+Alt+Mouse Click), the rectangular edit is also improved to be triggered with
+            Alt+Click (and stopped with escape).
+        </p>
+        <h3>Bundling of other useful plugins</h3>
+        <p>Eclipse has a myriad of useful plugins, and LiClipse bundles some which are considered to be useful
+            regardless of which language you're dealing with: Eclipse Color Theme, StartExplorer, AnyEdit and PyDev
+            (note that PyDev does not follow the rule of being useful for everyone as the other plugins,
+            but LiClipse itself reuses parts of the PyDev codebase).
+        </p>
+    
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
                     $ git checkout gh-pages

@@ -41,10 +41,268 @@
         </div>
         <div class="wrapper">
             <header>
-                %(header)s
+                
+<h1 class="header_liclipse">LiClipse</h1>
+<p>Lightweight editors, theming and usability improvements for Eclipse</p>
+<!-- <p class="view"><a href="https://github.com/brainwy/liclipse.page">
+    View the Project on GitHub <small>brainwy/liclipse.page</small></a></p> -->
+<ul class="top1">
+    <!-- <li><a href="http://???">Get It <strong>Download</strong></a></li> -->
+    <li><a href="contact.html">Get in <strong>Contact</strong></a></li>
+    <li><a href="http://liclipse.blogspot.com.br/">View <strong>Blog</strong></a></li>
+    <li><a href="https://sw-brainwy.rhcloud.com/tracker/LiClipse/">LiClipse<strong>Tracker</strong></a></li>
+</ul>
+<ul class="top2">
+    <li class="lifull"><a href="download.html">Get it<strong>Download</strong></a></li>
+</ul>
+<ul class="top3">
+    <li class="lifull"><a href="buy.html">Help to make it better<strong>Buy</strong></a></li>
+</ul>
+
+
+
+<p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
             </header>
             <section>
-                %(body)s
+                
+    	<h1>Installing LiClipse</h1>
+    	The recommended way of using LiClipse is by downloading the native installer for your platform, which provides a pre-configured
+        standalone for Windows (32 bits or 64 bits), Mac OS (64 bits) or Linux (32 bits or 64 bits).
+        <br/>
+        <br/>
+        However, it's also possible to install it through the update site:<br/><a href="http://update.liclipse.com/latest">http://update.liclipse.com/latest</a><br/>
+        (note that you must have Java 8 installed in this case -- see details on the Update Site Install section).
+        <br/>
+        <br/>
+
+        The latest versions may be downloaded through the links below:<br/>
+        <br/>
+        <ul>
+            <li>
+                <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%203.0.1/liclipse_3.0.1_win32.x86_64.exe">LiClipse 3.0.1 for Windows (64 bits)</a>
+            </li>
+            <li>
+                <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%203.0.1/liclipse_3.0.1_win32.x86.exe">LiClipse 3.0.1 for Windows (32 bits)</a>
+            </li>
+            <li>
+                <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%203.0.1/liclipse_3.0.1_macosx.cocoa.x86_64.dmg">LiClipse 3.0.1 for Mac OS (64 bits)</a>
+            </li>
+            <li>
+                <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%203.0.1/liclipse_3.0.1_linux.gtk.x86_64.tar.gz">LiClipse 3.0.1 for Linux (64 bits)</a>
+            </li>
+            <li>
+                <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%203.0.1/liclipse_3.0.1_linux.gtk.x86.tar.gz">LiClipse 3.0.1 Linux (32 bits)</a>
+            </li>
+            <li>
+                <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%203.0.1/UPDATE SITE 3.0.1.zip">LiClipse 3.0.1 Local Update Site</a>
+            </li>
+        </ul>
+        Note that 32 bit versions should only be used if you're really in a 32 bit machine.
+        <br/>
+        <br/>
+        It's possible to verify the MD5 of the downloaded file in:
+        <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%203.0.1/MD5_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 3.0.1 files MD5</a>.
+        <br/>
+        <br/>
+        Older versions may be downloaded from <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E">Google Drive</a>
+        (install instructions below for each platform).
+
+        <br/>
+        <br/>
+        It's interesting to note that other plugins (such as JDT, CDT, etc.)
+        may be installed regularly in LiClipse using the provided update site for such plugins.
+        <br/>
+        <br/>
+
+        Note that for Mac OS 32 bits, the install must be done using the provided update site using a base Eclipse install.
+        In this case, it's recommended to download the Eclipse Platform Runtime Binary from
+        <a href="http://download.eclipse.org/eclipse/downloads">http://download.eclipse.org/eclipse/downloads</a>
+        -- or a different Eclipse based bundle from your choice --
+        and install LiClipse as a plugin using the provided update site.
+        <br/>
+        <br/>
+
+        <strong>Install Instructions</strong>
+        <ul>
+            <li><a href="#windows">Native Windows Install</a></li>
+            <li><a href="#linux">Native Mac OS Install</a></li>
+            <li><a href="#linux">Native Linux Install</a></li>
+            <li><a href="#update_site">Update Site Install</a></li>
+            <li><a href="#updating_native">Updating Native Install</a></li>
+        </ul>
+
+        <br/>
+
+        <hr/><h2 id="windows">Native Windows Install</h2>
+
+        Download the .exe file from <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E">Google Drive</a> and run it locally, following the installer instructions.
+        <br/>
+        <br/>
+        Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
+        <br/>
+        <br/>
+
+
+        <br/><hr/><h2 id="macos">Native Mac OS Install</h2>
+
+        Download the .dmg file from <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E">Google Drive</a>, mount it as a disk and copy it (drag it) to the Applications dir.
+        <br/>
+        <br/>
+
+        <strong>Important:</strong>
+        <br/>
+        <br/>
+
+        On latest Mac OS X versions, after extracting the DMG, when executing LiClipse.app, you may get an error such as:
+        <br/>
+        <br/>
+
+        "LiCLipse.app" is damaged and can't be opened. You should move it to the Trash.
+        <br/>
+        <br/>
+
+        This happens because LiClipse isn't currently signed or distributed through the Mac App Store.
+        <br/>
+        <br/>
+
+        To overcome this, right-click the file, choose 'open' and confirm -- instead of double-clicking it (note that
+        this must be done only once, subsequent attempts to open with double-click should work properly).
+        <br/>
+        <br/>
+
+        Alternatively, it's possible to go to <strong>System Preferences > Security & Privacy</strong> and change "<strong>Allow Applications Downloaded
+        From</strong>" to "<strong>Anywhere</strong>". You have to click the lock on the bottom to make changes. Once you start up LiClipse.app, you can
+        change it back to "Mac App Store and identified developers".
+        <br/>
+        <br/>
+
+        See: <a href="http://support.apple.com/kb/ht3662">http://support.apple.com/kb/ht3662</a> for details.
+        <br/>
+        <br/>
+        Another note is that when you try to run LiClipse, Mac may end up asking you to install Java 6.<br/>
+        <br/>
+		Unfortunately this is an issue in Mac OS itself which is not solvable in LiClipse. Although LiClipse
+		requires Java 8 or later (so, it won't even use Java 6 if you install it), Mac will still ask you to install it.<br/>
+		<br/>
+		At this point, if you choose to install it, LiClipse will simply ignore it and will use the Java 8 that it has bundled.<br/>
+		<br/>
+		Now, if you don't want to install it, you should install at least a newer version and set it as the default one to be used:
+		<a href="http://blog.hgomez.net/blog/2012/07/20/understanding-java-from-command-line-on-osx/">http://blog.hgomez.net/blog/2012/07/20/understanding-java-from-command-line-on-osx/</a>
+		<br/>
+		<br/>
+
+        <br/><hr/><h2 id="linux">Native Linux Install</h2>
+
+
+        Download the .tar.gz from <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E">Google Drive</a>.
+        <br/>
+        <br/>
+        Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
+        <br/>
+        <br/>
+
+        Copy it to where you want to install it, unpack it at the chosen dir (where you have permissions) with:
+        <br/>
+        <br/>
+
+
+        <strong>tar xfz liclipse_VERSION_linux.gtk.ARCH.tar.gz</strong> (replacing VERSION and ARCH properly)
+        <br/>
+        <br/>
+
+        Then, create a link to start it using 'liclipse' from anywhere with:
+        <br/>
+        <br/>
+
+        <strong>sudo ln -s `pwd`/liclipse/LiClipse /usr/bin/liclipse</strong>
+        <br/>
+        <br/>
+
+        (or alternatively, just execute liclipse/LiClipse)
+        <br/>
+        <br/>
+        <strong>Important for Ubuntu 13.10 users onward</strong>: The menus may fail to work properly. In order to fix this,
+        follow the instructions from <a href="http://askubuntu.com/questions/361040/eclipse-menus-are-cut-off-or-dont-show/371447#371447">http://askubuntu.com/questions/361040/eclipse-menus-are-cut-off-or-dont-show/371447#371447</a>
+        changing from eclipse to liclipse where appropriate.
+        <br/>
+        <br/>
+
+
+        <br/><hr/><h2 id="update_site">Update Site Install</h2>
+
+        To use the update site, download the <strong>UPDATE SITE.zip</strong> from
+        <a href="https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E">Google Drive</a>,
+        extract it in a folder, or use the URL: <a href="http://update.liclipse.com/latest">http://update.liclipse.com/latest</a> then,
+        on Eclipse (or a previously downloaded LiClipse) go to:
+        <br/>
+        <br/>
+
+        <strong>Help > Install New Software</strong>
+        <br/>
+        <br/>
+
+        and on the dialog add the folder where you extracted the update site contents,
+        select all the items and follow the wizard (<strong>note</strong>: you may want uncheck "<strong>group
+        items by category</strong>" if you want to get the LiClipse RCP application too)..
+        <br/>
+        <br/>
+
+
+        <h3>Requirement: Eclipse 4.3.1</h3>
+
+        Note that to be installed, LiClipse requires Eclipse 4.3 (Kepler) onwards.
+        <br/>
+        <br/>
+
+
+        <h3>Requirement: Java 8</h3>
+
+        The installed Eclipse MUST be running with a Java 8 VM, otherwise LiClipse may not show as being installed or you'll have errors such as:<br/>
+        <br/>
+        java.lang.UnsupportedClassVersionError: SomeClass :<br/>
+         Unsupported major.minor version 51.0<br/>
+            at java.lang.ClassLoader.defineClass1(Native Method)<br/>
+            at java.lang.ClassLoader.defineClassCond(Unknown Source)<br/>
+        <br/>
+        -- Note that the native LiClipse installers ship by default with a VM, so, the installed java version shouldn't be a concern.<br/>
+        <br/>
+        <br/>
+
+
+
+        <h3>Requirement: uninstall conflicting bundles</h3>
+
+        Note that if you have some of the bundled plugins in Eclipse (i.e.: PyDev, AnyEdit, ColorTheme,
+        StartExplorer, Egit) you may have to uninstall it before installing LiClipse.
+        <br/>
+        <br/>
+
+
+        <br/><hr/><h2 id="updating_native">Updating Native Install</h2>
+
+        To update, 2 options are available:
+        <br/>
+        <br/>
+
+        1. Download the native installer again and install as a fresh install (but in this case you should install it
+        on a different directory or first uninstall the existing version).
+        <br/>
+        <br/>
+
+        2. Update the current installation with an update site that's more recent following the update site instructions.
+        <br/>
+        <br/>
+
+
+
+
+
+
+
+
+
+    
                 <!-- <pre><code>$ cd your_repo_root/repo_name
                     $ git fetch origin
                     $ git checkout gh-pages
