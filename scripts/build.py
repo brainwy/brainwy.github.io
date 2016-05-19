@@ -10,6 +10,7 @@ Also in:
 import os
 import shutil
 import pyodict
+import warnings
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
 if not os.path.exists(help_location):
@@ -66,14 +67,19 @@ HEADER = '''
 #===================================================================================================
 # apply_to
 #===================================================================================================
-def apply_to(filename, header=None, path=None, template_contents=None, kwargs=None):
+def apply_to(filename, header=None, path=None, template_contents=None, kwargs=None, replace_body=None):
     with open(filename, 'r') as stream:
         contents = stream.read()
-        body = extract(contents, 'body')
-        apply_to_contents(contents, os.path.basename(filename), body, header or HEADER, path=path, template_contents=template_contents, kwargs=kwargs)
+    body = extract(contents, 'body')
+    if replace_body:
+        body = replace_body(body)
+    apply_to_contents(
+        contents, os.path.basename(filename), body, header or HEADER, path=path, template_contents=template_contents, kwargs=kwargs)
 
 def template_replace(contents, kwargs):
-    to_replace = ['title', 'image_area', 'quote_area', 'right_area', 'contents_area', 'body', 'header']
+
+    to_replace = set(['title', 'image_area', 'quote_area', 'right_area', 'contents_area', 'body', 'header'])
+    to_replace.update(kwargs.keys())
 
     for r in to_replace:
         c = kwargs.get(r, '')
@@ -83,7 +89,7 @@ def template_replace(contents, kwargs):
 #===================================================================================================
 # apply_to_contents
 #===================================================================================================
-def apply_to_contents(contents, basename, body, header, path, template_contents, kwargs=None):
+def apply_to_contents(contents, basename, body, header, path=None, template_contents=None, kwargs=None):
     if kwargs is None:
         kwargs = {}
     kwargs.update({'body': body, 'header': header})
@@ -108,26 +114,28 @@ def extract(contents, tag):
 
 
 class Info:
-    def __init__(self, title):
+    def __init__(self, title, open_source):
+        self.title = title
+        self.open_source = open_source
         self.title = title
         self.filename = None
 
 
 FILE_TO_INFO = pyodict.odict([
-    ('change_color_theme.html', Info('Changing colors')),
-    ('launch.html', Info('Running/Launching')),
-    ('search.html', Info('Improved Search')),
-    ('supported_languages.html', Info('Language Support')),
-    ('scope_definition.html', Info('&nbsp;&nbsp;&nbsp;&nbsp;Language Scopes')),
-    ('ctags.html', Info('&nbsp;&nbsp;&nbsp;&nbsp;Ctags')),
-    ('indent.html', Info('&nbsp;&nbsp;&nbsp;&nbsp;Specifying indentation')),
-    ('templates.html', Info('&nbsp;&nbsp;&nbsp;&nbsp;Templates')),
-    ('spell_checking.html', Info('&nbsp;&nbsp;&nbsp;&nbsp;Spell Checking')),
-    ('customize_javascript.html', Info('JavaScript editor customization')),
-    ('customize_html.html', Info('HTML editor customization')),
-    ('customize_yaml.html', Info('YAML editor customization')),
-    ('textmate_bundles.html', Info('TextMate Bundles integration')),
-    ('preview.html', Info('HTML Preview')),
+    ('change_color_theme.html', Info('Changing colors', False)),
+    ('launch.html', Info('Running/Launching', False)),
+    ('search.html', Info('Improved Search', False)),
+    ('supported_languages.html', Info('Language Support', True)),
+    ('scope_definition.html', Info('Language Scopes', True)),
+    ('ctags.html', Info('Ctags', True)),
+    ('indent.html', Info('Specifying indentation', True)),
+    ('templates.html', Info('Templates', True)),
+    ('spell_checking.html', Info('Spell Checking', True)),
+    ('customize_javascript.html', Info('JavaScript editor customization', False)),
+    ('customize_html.html', Info('HTML editor customization', False)),
+    ('customize_yaml.html', Info('YAML editor customization', False)),
+    ('textmate_bundles.html', Info('TextMate Bundles integration', True)),
+    ('preview.html', Info('HTML Preview', False)),
 ])
 
 
@@ -146,19 +154,41 @@ else:
 #===================================================================================================
 def create_manual_header():
     lis = []
+    open_source = []
     for file_basename, file_info in FILE_TO_INFO.iteritems():
-        lis.append('<p><a href="%s">%s</a></p>' % (
-            os.path.basename(file_info.filename),
-            file_info.title
-        ))
+        if not file_info.open_source:
+            lis.append('<p><a href="%s">%s</a></p>' % (
+                os.path.basename(file_info.filename),
+                file_info.title
+            ))
+        else:
+            open_source.append('<p><a href="%s">%s</a></p>' % (
+                os.path.basename(file_info.filename),
+                file_info.title
+            ))
+
+    open_source = '''
+<h1>Manual</h1>
+<br/>
+Choose the topic you're interested in...<br/>
+<br/>
+<ul>
+%(li)s
+</ul>
+<br><br><br>
+''' % {'li': '\n'.join(open_source)}
+
+    open_source += '<br/>' * 25
 
     return '''
 %(li)s<br><br><br>
 <p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-''' % {'li': '\n'.join(lis)}
+''' % {'li': '\n'.join(lis)}, open_source
 
 if os.path.exists(help_location):
-    MANUAL_HEADER = create_manual_header()
+    MANUAL_NOT_OPEN_SOURCE_HEADER, MANUAL_OPEN_SOURCE_HEADER = create_manual_header()
+else:
+    warnings.warn('Not creating help. %s does not exist.' % (help_location,))
 
 
 
@@ -170,8 +200,10 @@ def create_manual_page():
 
     manual_body = '''
 <h3>Choose the topic you're interested in...</h3>
+Note: for the manual on the Open Source <a href="text/index.html">LiClipseText</a> component (which provides syntax highlighting and languages customization), visit the
+<a href="text/manual.html">LiClipseText Manual</a>
 '''
-    apply_to_contents(manual_body, 'manual.html', manual_body, MANUAL_HEADER, None, None)
+    apply_to_contents(manual_body, 'manual.html', manual_body, MANUAL_NOT_OPEN_SOURCE_HEADER, None, None)
 
 
 
@@ -179,11 +211,54 @@ def create_manual_page():
 # main
 #===================================================================================================
 def main():
+    with open(os.path.join(this_file_dir, 'text', '_template.html')) as stream:
+        text_template_contents = stream.read()
+    with open(os.path.join(this_file_dir, 'text', '_template_manual.html')) as stream:
+        text_template_manual_contents = stream.read()
+
     # Manual
     if os.path.exists(help_location):
         create_manual_page()
-        for info in FILE_TO_INFO.itervalues():
-            apply_to(info.filename, header=MANUAL_HEADER)
+        values = FILE_TO_INFO.values()
+        open_source_values = [x for x in values if x.open_source]
+
+        for i, info in enumerate(values):
+            if not info.open_source:
+                apply_to(info.filename, header=MANUAL_NOT_OPEN_SOURCE_HEADER)
+
+        for i, info in enumerate(open_source_values):
+            if i == 0:
+                prev = 'manual.html'
+                title_prev = 'Manual'
+
+                next = os.path.basename(open_source_values[i+1].filename)
+                title_next = open_source_values[i+1].title
+
+            elif i == len(open_source_values)-1:
+                prev = os.path.basename(open_source_values[i-1].filename)
+                title_prev = open_source_values[i-1].title
+
+                next = 'manual.html'
+                title_next='Manual'
+            else:
+                prev = os.path.basename(open_source_values[i-1].filename)
+                title_prev = open_source_values[i-1].title
+
+                next = os.path.basename(open_source_values[i+1].filename)
+                title_next = open_source_values[i+1].title
+
+            print 'applying to:', info.filename
+            title_next = title_next.replace('&nbsp;', '')
+            title_prev = title_prev.replace('&nbsp;', '')
+            title_next = '(%s)' % title_next
+            title_prev = '(%s)' % title_prev
+            def replace_body(body):
+                return body.replace('src="./images', 'src="../images')
+            apply_to(info.filename, path='text', template_contents=text_template_manual_contents, kwargs={
+                'title': info.title, 'root': 'manual.html', 'prev':prev, 'next':next, 'title_prev': title_prev, 'title_next':title_next},
+                     replace_body=replace_body)
+            basename = os.path.basename(info.filename)
+            apply_to_contents('', basename,'This file was moved to: <a href="text/%s">text/%s</a>' % (basename,basename), HEADER, )
 
     # Others
     apply_to(os.path.join(this_file_dir, 'index.html'))
@@ -196,15 +271,13 @@ def main():
     apply_to(os.path.join(this_file_dir, 'multi_edition_video.html'))
     apply_to(os.path.join(this_file_dir, 'contact.html'))
 
-    with open(os.path.join(this_file_dir, 'text', '_template.html')) as stream:
-        text_template_contents = stream.read()
 
-    apply_to(os.path.join(this_file_dir, 'text', 'index.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'LiClipseText'})
-    apply_to(os.path.join(this_file_dir, 'text', 'about.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'About'})
-    apply_to(os.path.join(this_file_dir, 'text', 'download.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Download'})
-    apply_to(os.path.join(this_file_dir, 'text', 'manual.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Manual'})
-    apply_to(os.path.join(this_file_dir, 'text', 'screenshots.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Screenshots'})
-    apply_to(os.path.join(this_file_dir, 'text', 'developers.html'),path='text',template_contents=text_template_contents,kwargs={'title': 'Developers'})
+    apply_to(os.path.join(this_file_dir, 'text', 'index.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'LiClipseText'})
+    apply_to(os.path.join(this_file_dir, 'text', 'about.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'About'})
+    apply_to(os.path.join(this_file_dir, 'text', 'download.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'Download'})
+    apply_to_contents('', 'manual.html', MANUAL_OPEN_SOURCE_HEADER, '', path='text', template_contents=text_template_contents, kwargs={'title': 'Download'})
+    apply_to(os.path.join(this_file_dir, 'text', 'screenshots.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'Screenshots'})
+    apply_to(os.path.join(this_file_dir, 'text', 'developers.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'Developers'})
 
     if os.path.exists(help_location):
         copytree(os.path.join(help_location, 'images'), os.path.join(page_dir, 'images'))
