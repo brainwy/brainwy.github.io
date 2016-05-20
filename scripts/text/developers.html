@@ -2,6 +2,69 @@
 <html>
     <head></head>
     <body>
-    	Developers (to be added soon...)
+        <div class="section" id="getting-the-code">
+            <h1>Getting the code</h1>
+            <p>The first thing you probably want to do in order to code in LiClipseText is
+                <strong>getting its code</strong>.
+            </p>
+            <p><strong>Pre-requisites:</strong> Eclipse SDK 4.6.0, Git and Java 8.0 (note that other
+                versions of those should work too but details may differ a bit)
+            </p>
+            <p>Before getting the code, there's an important step you need to make:
+                Change your java 'compiler compliance-level' to 8.0. To do this, go to
+                <strong>window &gt; preferences &gt; Java &gt; compiler</strong> and change that setting from
+                <strong>1.4 to 1.8</strong>.
+            </p>
+            <div class="section" id="repository">
+                <h2>Repository</h2>
+                <p>Get the code with Git from
+                    <a class="reference external" href="https://github.com/fabioz/LiClipseText">https://github.com/fabioz/LiClipseText</a>
+                    (ideally, fork it at github, create your own branch at the forked
+                    repository -- usually based in the <strong>master</strong> branch -- and later send
+                    a pull request on github so that the code can be merged back). Later, if
+                    you want to provide some other feature/bugfix, a new branch should be
+                    created again.
+                </p>
+                <p>Then, in Eclipse, go to: <strong>File &gt; Import &gt; Existing projects into
+                    workspace</strong> and point it to the root of the repository you just
+                    downloaded.
+                </p>
+            </div>
+        </div>
+        <div class="section" id="configuring-the-environment-after-getting-the-code">
+            <h1>Configuring the environment after getting the code</h1>
+            <p>Important: Before doing any changes to the code it's important to note
+                that you should create a new branch (usually based on the master
+                branch) for doing code changes. See:
+                <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging</a>
+                for details on creating and using branches.
+            </p>
+            <p>Note that to make sure that LiClipseText keeps working on the long run,
+                usually tests are required for pull requests (unless it's a really trivial change).
+                Those reside in the project/tests source folder.
+            </p>
+        </div>
+        <div class="section" id="running-it-with-your-changes">
+            <h1>Running it with your changes</h1>
+            <p>After you download the contents and do changes to the code, you can do a Run As &gt; Eclipse Application and
+                a new Eclipse instance will be run with the changes you did.
+            </p>
+        </div>
+        <div class="section" id="creating-a-distribution-locally">
+            <h1>Creating a distribution locally</h1>
+            <p>Now, on to the build: LiClipseText uses maven to do the build, so, it should be a matter of
+                using "mvn install".
+            </p>
+            <p>There's a bat file at: /features/org.brainwy.liclipsetext.feature/build_liclipsetext.bat
+                which can be used as a base to know which environment variables are needed to do a build
+                and /pom.xml (in the root) has more details on getting pre-requisites.
+            </p>
+        </div>
+        <div class="section" id="contributing-back">
+            <h1>Contributing back</h1>
+            <p>Create a pull request in github:
+                <a class="reference external" href="http://help.github.com/send-pull-requests/">http://help.github.com/send-pull-requests/</a>
+            </p>
+        </div>
     </body>
 </html>

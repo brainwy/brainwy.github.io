@@ -19,6 +19,8 @@ if not os.path.exists(help_location):
     workspace = os.path.dirname(liclipse_page)
     help_location = os.path.join(workspace, 'liclipse', 'plugins', 'com.brainwy.liclipse.help')
 
+# Uncomment to skip the generation of the help.
+# help_location = ''
 
 #===================================================================================================
 # copytree
@@ -184,6 +186,7 @@ Choose the topic you're interested in...<br/>
 %(li)s<br><br><br>
 <p><small>Copyright 2013-2016 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}, open_source
+MANUAL_OPEN_SOURCE_HEADER = None
 
 if os.path.exists(help_location):
     MANUAL_NOT_OPEN_SOURCE_HEADER, MANUAL_OPEN_SOURCE_HEADER = create_manual_header()
@@ -275,7 +278,8 @@ def main():
     apply_to(os.path.join(this_file_dir, 'text', 'index.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'LiClipseText'})
     apply_to(os.path.join(this_file_dir, 'text', 'about.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'About'})
     apply_to(os.path.join(this_file_dir, 'text', 'download.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'Download'})
-    apply_to_contents('', 'manual.html', MANUAL_OPEN_SOURCE_HEADER, '', path='text', template_contents=text_template_contents, kwargs={'title': 'Download'})
+    if MANUAL_OPEN_SOURCE_HEADER is not None:
+        apply_to_contents('', 'manual.html', MANUAL_OPEN_SOURCE_HEADER, '', path='text', template_contents=text_template_contents, kwargs={'title': 'Download'})
     apply_to(os.path.join(this_file_dir, 'text', 'screenshots.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'Screenshots'})
     apply_to(os.path.join(this_file_dir, 'text', 'developers.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'Developers'})
 
