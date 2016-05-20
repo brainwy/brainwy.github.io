@@ -8,8 +8,8 @@ Also in:
     http://brainwy.github.io
 '''
 import os
-import shutil
 import pyodict
+import shutil
 import warnings
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
