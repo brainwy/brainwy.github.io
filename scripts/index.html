@@ -34,41 +34,28 @@
             </li>
         </ul>
 
-        <h3>Release Highlights for LiClipse 3.2.1</h3>
+        <h3>Release Highlights for LiClipse 3.5.0</h3>
         <ul>
-        	<li>Updated PyDev to 5.3.1 (see <a href="http://www.pydev.org">http://www.pydev.org</a> for details).</li>
-        	<li>Updated LiClipse themes to have a different highlight for the default tab (selectedTabInitialBackground, selectedTabActiveInitialBackground in the theme preferences).</li>
-        	<li>Fixed default colors for some themes and fixed heap status color.</li>
+        	<li>Updated PyDev to 5.6.0.</li>
+        	<ul>
+        	    <li>Faster debugger (only supporting Python 2.6 onwards now).</li>
+        	    <li>Debugger properly displaying variables when connected to interactive console.</li>
+        	    <li>super and pytest fixtures properly recognized in the type inferonce engine.</li>
+        	    <li>Many other improvements. See <a href="http://www.pydev.org">http://www.pydev.org</a> for more details.</li>
+        	</ul>
+        	<li>Fixed issue where filtering results wasn't working properly for LiClipse text searches.</li>
         </ul>
 
-        <h3>Release Highlights for LiClipse 3.2.0</h3>
+        <h3>Release Highlights for LiClipse 3.4.0</h3>
         <ul>
-        	<li>Supporting CMake by default.</li>
-        	<li>Properly making filename associations (non-extension based) for TextMate Bundles.</li>
-        	<li>Updated PyDev to 5.3.0 (see <a href="http://www.pydev.org">http://www.pydev.org</a> for details).</li>
-        	<li>Updated EGit.</li>
-        	<li>Updated Eclipse to 4.6.1.</li>
-        </ul>
-
-        <h3>Release Highlights for LiClipse 3.1.0</h3>
-        <ul>
-        	<li>Updated EGit.</li>
-        	<li>Updated PyDev to 5.2.0 (see <a href="http://www.pydev.org">http://www.pydev.org</a> for details).</li>
-        </ul>
-
-        <h3>Release Highlights for LiClipse 3.0.6</h3>
-        <ul>
-        	<li>Based on <strong>Eclipse 4.6 (final)</strong></li>
-        	<li>Updated EGit.</li>
-        	<li>Updated PyDev to 5.1.2 (see <a href="http://www.pydev.org">http://www.pydev.org</a> for details).</li>
-        </ul>
-
-        <h3>Release Highlights for LiClipse 3.0.3</h3>
-        <ul>
-        	<li>Based on <strong>Eclipse 4.6 RC1</strong></li>
-        	<li>Updated EGit (fixed a critical issue in the Git Staging View).</li>
-        	<li>The LiClipse editor component (<a href="http://www.liclipse.com/text">LiClipseText</a>) is now open source (
-        		view <a href="http://www.liclipse.com/text">http://www.liclipse.com/text</a> for more information).</li>
+        	<li>Updated PyDev to 5.5.0.</li>
+        	<ul>
+        	    <li>Many bugfixes (in refactoring, imports handling, code completion debugger and Python 3.6 syntax).</li>
+        	    <li><strong>Ctrl+Shift+Alt+O</strong> can be used to open the last hyperlink in the console that's currently open (it's now possible to jump directly to the error in some exception).</li>
+        	    <li><strong>Ctrl+2,sw</strong> switches the target and value in assign statements (may not work properly if more than one '=' is found in the line).</li>
+        	    <li>Allows adding local imports to the top of the module.</li>
+        	    <li>See <a href="http://www.pydev.org">http://www.pydev.org</a> for more details.</li>
+        	</ul>
         </ul>
 
         <p><a href="history.html">View highlights for previous releases</a></p>
@@ -80,17 +67,17 @@
         <p>The HTML editor has advanced context-based code-completion</p>
         <p>The HTML, XML and JavaScript editors have code-analysis and code-formatting features</p>
         <h3>Usability improvements for all Eclipse editors</h3>
-        <p>At this point, the major improvement is multi-edition and vertical indent guides, supporting all editors
+        <p>At this point, the major improvements are <strong>multi-edition</strong> and <strong>vertical indent guides</strong>, supporting all editors
             (such as PyDev, JDT, etc).
         </p>
         <p>See: <a href="multi_edition_video.html">Multi-Edition Video</a> for details</p>
-        <p>Besides the multi-edition (which can be triggered in a Ctrl+K search or with the mouse with
-            Ctrl+Alt+Mouse Click), the rectangular edit is also improved to be triggered with
-            Alt+Click (and stopped with escape).
+        <p>Besides the <strong>multi-edition</strong> (which can be triggered in a <strong>Ctrl+K</strong> search or with the mouse with
+            <strong>Ctrl+Alt+Mouse Click</strong>), the <strong>rectangular edi</strong>t is also improved to be triggered with
+            <strong>Alt+Click</strong> (and stopped with escape).
         </p>
         <h3>Bundling of other useful plugins</h3>
         <p>Eclipse has a myriad of useful plugins, and LiClipse bundles some which are considered to be useful
-            regardless of which language you're dealing with: Eclipse Color Theme, StartExplorer, AnyEdit and PyDev
+            regardless of which language you're dealing with: <strong>Eclipse Color Theme</strong>, <strong>StartExplorer</strong>, <strong>AnyEdit</strong> and <strong>PyDev</strong>
             (note that PyDev does not follow the rule of being useful for everyone as the other plugins,
             but LiClipse itself reuses parts of the PyDev codebase).
         </p>

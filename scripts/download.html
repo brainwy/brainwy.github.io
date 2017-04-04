@@ -26,29 +26,29 @@
         <br/>
         <ul>
             <li>
-                <a href="http://www.mediafire.com/file/dk2anz95ld7k8k9/liclipse_3.2.1_win32.x86_64.exe">LiClipse 3.2.1 for Windows (64 bits)</a>
+                <a href="http://www.mediafire.com/file/v9ptxxu38773gda/liclipse_3.5.0_win32.x86_64.exe">LiClipse 3.5.0 Windows (64 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/4cjoy6wvmw3t0j6/liclipse_3.2.1_win32.x86.exe">LiClipse 3.2.1 for Windows (32 bits)</a>
+                <a href="http://www.mediafire.com/file/ymbypd3k2410lwg/liclipse_3.5.0_win32.x86.exe">LiClipse 3.5.0 Windows (32 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/6w3936tze4ptj2l/liclipse_3.2.1_macosx.cocoa.x86_64.dmg">LiClipse 3.2.1 for Mac OS (64 bits)</a>
+                <a href="http://www.mediafire.com/file/aq66cbkiazokfan/liclipse_3.5.0_macosx.cocoa.x86_64.dmg">LiClipse 3.5.0 Mac OS (64 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/dta3tqacal9l2ft/liclipse_3.2.1_linux.gtk.x86_64.tar.gz">LiClipse 3.2.1 for Linux (64 bits)</a>
+                <a href="http://www.mediafire.com/file/3byyydkomk36i58/liclipse_3.5.0_linux.gtk.x86_64.tar.gz">LiClipse 3.5.0 Linux (64 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/24muwj71qvbyv2r/liclipse_3.2.1_linux.gtk.x86.tar.gz">LiClipse 3.2.1 Linux (32 bits)</a>
+                <a href="http://www.mediafire.com/file/wu1awavjeev6hli/liclipse_3.5.0_linux.gtk.x86.tar.gz">LiClipse 3.5.0 Linux (32 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/iajefflbexj3t3l/UPDATE_SITE_3.2.1.zip">LiClipse 3.2.1 Local Update Site</a>
+                <a href="http://www.mediafire.com/file/k9884m9mwhdxqyb/UPDATE_SITE_3.5.0.zip">LiClipse 3.5.0 Local Update Site</a>
             </li>
         </ul>
         Note that 32 bit versions should only be used if you're really in a 32 bit machine.
         <br/>
         <br/>
         It's possible to verify the MD5 of the downloaded file in:
-        <a href="http://www.mediafire.com/file/m91s9wabzimzvz4/MD5_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 3.2.1 files MD5</a>.
+        <a href="http://www.mediafire.com/file/zk5m6oo447ay73q/MD5_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 3.5.0 files MD5</a>.
         <br/>
         <br/>
         Older versions may be downloaded from <a href="https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse">MediaFire</a>
@@ -72,7 +72,7 @@
         <strong>Install Instructions</strong>
         <ul>
             <li><a href="#windows">Native Windows Install</a></li>
-            <li><a href="#linux">Native Mac OS Install</a></li>
+            <li><a href="#macos">Native Mac OS Install</a></li>
             <li><a href="#linux">Native Linux Install</a></li>
             <li><a href="#update_site">Update Site Install</a></li>
             <li><a href="#updating_native">Updating Native Install</a></li>
@@ -82,7 +82,7 @@
 
         <hr/><h2 id="windows">Native Windows Install</h2>
 
-        Download the .exe file from <a href="https://www.mediafire.com/folder/7gtz3bt91hj7h/LiClipse_3.2.1">MediaFire</a> and run it locally, following the installer instructions.
+        Download the .exe file from <a href="https://www.mediafire.com/folder/g08kiimaelqd3/LiClipse_3.5.0">MediaFire</a> and run it locally, following the installer instructions.
         <br/>
         <br/>
         Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
@@ -92,7 +92,7 @@
 
         <br/><hr/><h2 id="macos">Native Mac OS Install</h2>
 
-        Download the .dmg file from <a href="https://www.mediafire.com/folder/7gtz3bt91hj7h/LiClipse_3.2.1">MediaFire</a>, mount it as a disk and copy it (drag it) to the Applications dir.
+        Download the .dmg file from <a href="https://www.mediafire.com/folder/g08kiimaelqd3/LiClipse_3.5.0">MediaFire</a>, mount it as a disk and copy it (drag it) to the Applications dir.
         <br/>
         <br/>
 
@@ -104,7 +104,7 @@
         <br/>
         <br/>
 
-        "LiCLipse.app" is damaged and can't be opened. You should move it to the Trash.
+        "LiClipse.app" is damaged and can't be opened. You should move it to the Trash.
         <br/>
         <br/>
 
@@ -112,36 +112,33 @@
         <br/>
         <br/>
 
-        To overcome this, right-click the file, choose 'open' and confirm -- instead of double-clicking it (note that
-        this must be done only once, subsequent attempts to open with double-click should work properly).
+        To overcome this, it's possible to do the following:
+
+
+        <ul>
+        <li><strong>Step 1</strong> - Open terminal and run the following command</li>
+        
+        
+        <ul><li><strong>sudo spctl --master-disable</strong></li></ul>
+        
+        <li><strong>Step 2</strong> - Close and then reopen System Preferences - Privacy and "Anywhere" is now added to the list.</li>
+        
+        <li><strong>Step 3</strong> - Make sure that "Anywhere" is now selected</li>
+        
+        <li><strong>Step 4</strong> - Run LiClipse App, and you will be presented with the traditional dialog to open the app</li>
+        
+        <li><strong>Step 5</strong> - Once you successfully run the app, you should then put the system back into protected mode with:</li>
+        
+        <ul><li><strong>sudo spctl --master-enable</strong></li></ul>
+        </ul>
         <br/>
         <br/>
 
-        Alternatively, it's possible to go to <strong>System Preferences > Security & Privacy</strong> and change "<strong>Allow Applications Downloaded
-        From</strong>" to "<strong>Anywhere</strong>". You have to click the lock on the bottom to make changes. Once you start up LiClipse.app, you can
-        change it back to "Mac App Store and identified developers".
-        <br/>
-        <br/>
-
-        See: <a href="http://support.apple.com/kb/ht3662">http://support.apple.com/kb/ht3662</a> for details.
-        <br/>
-        <br/>
-        Another note is that when you try to run LiClipse, Mac may end up asking you to install Java 6.<br/>
-        <br/>
-		Unfortunately this is an issue in Mac OS itself which is not solvable in LiClipse. Although LiClipse
-		requires Java 8 or later (so, it won't even use Java 6 if you install it), Mac will still ask you to install it.<br/>
-		<br/>
-		At this point, if you choose to install it, LiClipse will simply ignore it and will use the Java 8 that it has bundled.<br/>
-		<br/>
-		Now, if you don't want to install it, you should install at least a newer version and set it as the default one to be used:
-		<a href="http://blog.hgomez.net/blog/2012/07/20/understanding-java-from-command-line-on-osx/">http://blog.hgomez.net/blog/2012/07/20/understanding-java-from-command-line-on-osx/</a>
-		<br/>
-		<br/>
 
         <br/><hr/><h2 id="linux">Native Linux Install</h2>
 
 
-        Download the .tar.gz from <a href="https://www.mediafire.com/folder/7gtz3bt91hj7h/LiClipse_3.2.1">MediaFire</a>.
+        Download the .tar.gz from <a href="https://www.mediafire.com/folder/g08kiimaelqd3/LiClipse_3.5.0">MediaFire</a>.
         <br/>
         <br/>
         Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
@@ -178,7 +175,7 @@
         <br/><hr/><h2 id="update_site">Update Site Install</h2>
 
         To use the update site, download the <strong>UPDATE SITE.zip</strong> from
-        <a href="https://www.mediafire.com/folder/7gtz3bt91hj7h/LiClipse_3.2.1">MediaFire</a>,
+        <a href="https://www.mediafire.com/folder/g08kiimaelqd3/LiClipse_3.5.0">MediaFire</a>,
         extract it in a folder, or use the URL: <a href="http://update.liclipse.com/latest">http://update.liclipse.com/latest</a> then,
         on Eclipse (or a previously downloaded LiClipse) go to:
         <br/>
@@ -195,9 +192,9 @@
         <br/>
 
 
-        <h3>Requirement: Eclipse 4.3.1</h3>
+        <h3>Requirement: Eclipse 4.6</h3>
 
-        Note that to be installed, LiClipse requires Eclipse 4.3 (Kepler) onwards.
+        Note that to be installed, LiClipse requires Eclipse 4.6 (Neon) onwards.
         <br/>
         <br/>
 
