@@ -12,6 +12,25 @@ import pyodict
 import shutil
 import warnings
 
+# On a new release, update the links and version.
+
+DOWNLOADS = '''
+http://www.mediafire.com/file/uhh3bpqin7bn7mi/MD5_AND_INSTALL_INSTRUCTIONS.txt
+http://www.mediafire.com/file/9plpza5l41awfa6/LICENSE.TXT
+http://www.mediafire.com/file/ltdiwv5pzia2ow7/liclipse_3.6.0_win32.x86.exe
+http://www.mediafire.com/file/4xocnlfxbawjhgo/liclipse_3.6.0_win32.x86_64.exe
+http://www.mediafire.com/file/31508h0na9823ns/liclipse_3.6.0_macosx.cocoa.x86_64.dmg
+http://www.mediafire.com/file/8pdhyvf2xbpktnx/UPDATE_SITE_3.6.0.zip
+http://www.mediafire.com/file/okiagh1sjmw88x4/liclipse_3.6.0_linux.gtk.x86_64.tar.gz
+http://www.mediafire.com/file/t7193woj1p5pm5a/liclipse_3.6.0_linux.gtk.x86.tar.gz
+https://www.mediafire.com/folder/tztuzhz62bzvs/LiClipse_3.6.0
+'''
+
+DOWNLOAD_REPLACEMENTS = {
+    'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
+    'liclipse_version': '3.6.0',
+}
+
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
 if not os.path.exists(help_location):
     scripts = os.path.dirname(__file__)
@@ -264,10 +283,44 @@ def main():
             apply_to_contents('', basename,'This file was moved to: <a href="text/%s">text/%s</a>' % (basename,basename), HEADER, )
 
     # Others
+    for line in DOWNLOADS.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        if line.endswith('MD5_AND_INSTALL_INSTRUCTIONS.txt'):
+            DOWNLOAD_REPLACEMENTS['md5_and_install_instructions_url'] = line
+
+        elif line.endswith('LICENSE.TXT'):
+            DOWNLOAD_REPLACEMENTS['license_url'] = line
+
+        elif line.endswith('win32.x86_64.exe'):
+            DOWNLOAD_REPLACEMENTS['win64_url'] = line
+
+        elif line.endswith('win32.x86.exe'):
+            DOWNLOAD_REPLACEMENTS['win32_url'] = line
+
+        elif line.endswith('macosx.cocoa.x86_64.dmg'):
+            DOWNLOAD_REPLACEMENTS['macos_url'] = line
+
+        elif line.endswith('.zip') and 'UPDATE_SITE' in line:
+            DOWNLOAD_REPLACEMENTS['update_site_url'] = line
+
+        elif line.endswith('linux.gtk.x86_64.tar.gz'):
+            DOWNLOAD_REPLACEMENTS['linux64_url'] = line
+
+        elif line.endswith('linux.gtk.x86.tar.gz'):
+            DOWNLOAD_REPLACEMENTS['linux32_url'] = line
+
+        elif 'LiClipse_' in line:
+            DOWNLOAD_REPLACEMENTS['folder_url'] = line
+
+        else:
+            raise AssertionError('Unexpected line: %s' % (line,))
+
     apply_to(os.path.join(this_file_dir, 'index.html'))
     apply_to(os.path.join(this_file_dir, 'languages.html'))
     apply_to(os.path.join(this_file_dir, 'history.html'))
-    apply_to(os.path.join(this_file_dir, 'download.html'))
+    apply_to(os.path.join(this_file_dir, 'download.html'),kwargs=DOWNLOAD_REPLACEMENTS)
     apply_to(os.path.join(this_file_dir, 'license.html'))
     apply_to(os.path.join(this_file_dir, 'faq.html'))
     apply_to(os.path.join(this_file_dir, 'buy.html'))

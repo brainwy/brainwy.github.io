@@ -26,32 +26,32 @@
         <br/>
         <ul>
             <li>
-                <a href="http://www.mediafire.com/file/v9ptxxu38773gda/liclipse_3.5.0_win32.x86_64.exe">LiClipse 3.5.0 Windows (64 bits)</a>
+                <a href="%(win64_url)s">LiClipse %(liclipse_version)s Windows (64 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/ymbypd3k2410lwg/liclipse_3.5.0_win32.x86.exe">LiClipse 3.5.0 Windows (32 bits)</a>
+                <a href="%(win32_url)s">LiClipse %(liclipse_version)s Windows (32 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/aq66cbkiazokfan/liclipse_3.5.0_macosx.cocoa.x86_64.dmg">LiClipse 3.5.0 Mac OS (64 bits)</a>
+                <a href="%(macos_url)s">LiClipse %(liclipse_version)s Mac OS (64 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/3byyydkomk36i58/liclipse_3.5.0_linux.gtk.x86_64.tar.gz">LiClipse 3.5.0 Linux (64 bits)</a>
+                <a href="%(linux64_url)s">LiClipse %(liclipse_version)s Linux (64 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/wu1awavjeev6hli/liclipse_3.5.0_linux.gtk.x86.tar.gz">LiClipse 3.5.0 Linux (32 bits)</a>
+                <a href="%(linux32_url)s">LiClipse %(liclipse_version)s Linux (32 bits)</a>
             </li>
             <li>
-                <a href="http://www.mediafire.com/file/k9884m9mwhdxqyb/UPDATE_SITE_3.5.0.zip">LiClipse 3.5.0 Local Update Site</a>
+                <a href="%(update_site_url)s">LiClipse %(liclipse_version)s Local Update Site</a>
             </li>
         </ul>
         Note that 32 bit versions should only be used if you're really in a 32 bit machine.
         <br/>
         <br/>
         It's possible to verify the MD5 of the downloaded file in:
-        <a href="http://www.mediafire.com/file/5dodvlz6tk544ja/MD5_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 3.5.0 files MD5</a>.
+        <a href="%(md5_and_install_instructions_url)s">LiClipse %(liclipse_version)s files MD5</a>.
         <br/>
         <br/>
-        Older versions may be downloaded from <a href="https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse">MediaFire</a>
+        Older versions may be downloaded from <a href="%(all_versions_url)s">MediaFire</a>
         (install instructions below for each platform).
 
         <br/>
@@ -82,7 +82,7 @@
 
         <hr/><h2 id="windows">Native Windows Install</h2>
 
-        Download the .exe file from <a href="https://www.mediafire.com/folder/g08kiimaelqd3/LiClipse_3.5.0">MediaFire</a> and run it locally, following the installer instructions.
+        Download the .exe file from <a href="%(folder_url)s">MediaFire</a> and run it locally, following the installer instructions.
         <br/>
         <br/>
         Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
@@ -92,7 +92,7 @@
 
         <br/><hr/><h2 id="macos">Native Mac OS Install</h2>
 
-        Download the .dmg file from <a href="https://www.mediafire.com/folder/g08kiimaelqd3/LiClipse_3.5.0">MediaFire</a>, mount it as a disk and copy it (drag it) to the Applications dir.
+        Download the .dmg file from <a href="%(folder_url)s">MediaFire</a>, mount it as a disk and copy it (drag it) to the Applications dir.
         <br/>
         <br/>
 
@@ -117,18 +117,18 @@
 
         <ul>
         <li><strong>Step 1</strong> - Open terminal and run the following command</li>
-        
-        
+
+
         <ul><li><strong>sudo spctl --master-disable</strong></li></ul>
-        
+
         <li><strong>Step 2</strong> - Close and then reopen System Preferences - Privacy and "Anywhere" is now added to the list.</li>
-        
+
         <li><strong>Step 3</strong> - Make sure that "Anywhere" is now selected</li>
-        
+
         <li><strong>Step 4</strong> - Run LiClipse App, and you will be presented with the traditional dialog to open the app</li>
-        
+
         <li><strong>Step 5</strong> - Once you successfully run the app, you should then put the system back into protected mode with:</li>
-        
+
         <ul><li><strong>sudo spctl --master-enable</strong></li></ul>
         </ul>
         <br/>
@@ -138,7 +138,7 @@
         <br/><hr/><h2 id="linux">Native Linux Install</h2>
 
 
-        Download the .tar.gz from <a href="https://www.mediafire.com/folder/g08kiimaelqd3/LiClipse_3.5.0">MediaFire</a>.
+        Download the .tar.gz from <a href="%(folder_url)s">MediaFire</a>.
         <br/>
         <br/>
         Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
@@ -175,7 +175,7 @@
         <br/><hr/><h2 id="update_site">Update Site Install</h2>
 
         To use the update site, download the <strong>UPDATE SITE.zip</strong> from
-        <a href="https://www.mediafire.com/folder/g08kiimaelqd3/LiClipse_3.5.0">MediaFire</a>,
+        <a href="%(folder_url)s">MediaFire</a>,
         extract it in a folder, or use the URL: <a href="http://update.liclipse.com/latest">http://update.liclipse.com/latest</a> then,
         on Eclipse (or a previously downloaded LiClipse) go to:
         <br/>
