@@ -47,8 +47,8 @@
         Note that 32 bit versions should only be used if you're really in a 32 bit machine.
         <br/>
         <br/>
-        It's possible to verify the MD5 of the downloaded file in:
-        <a href="%(md5_and_install_instructions_url)s">LiClipse %(liclipse_version)s files MD5</a>.
+        It's possible to verify the SHA256 of the downloaded file in:
+        <a href="%(sha256_and_install_instructions_url)s">LiClipse %(liclipse_version)s files SHA256</a>.
         <br/>
         <br/>
         Older versions may be downloaded from <a href="%(all_versions_url)s">MediaFire</a>
@@ -86,6 +86,10 @@
         <br/>
         <br/>
         Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
+        <br/>
+        <br/>
+        Note 2: you may have to unblock the file to be executed as pointed in:
+        <a href="https://blogs.msdn.microsoft.com/delay/p/unblockingdownloadedfile/">https://blogs.msdn.microsoft.com/delay/p/unblockingdownloadedfile/</a>
         <br/>
         <br/>
 
@@ -224,16 +228,47 @@
 
         <br/><hr/><h2 id="updating_native">Updating Native Install</h2>
 
-        To update, 2 options are available:
+        To update, 2 options are available (option 1 is recommended):
         <br/>
         <br/>
 
-        1. Download the native installer again and install as a fresh install (but in this case you should install it
-        on a different directory or first uninstall the existing version).
+        <strong>1.</strong> Download the native installer again and install as a fresh install in a different folder, then,
+        to restore other plugins, go to <strong>File > Import > Install > From Existing Installation</strong> and import
+        the plugins you want to keep from your previous install.
+        <br/>
+        <br/>
+        After the install is complete, just make sure you point to the same workspace you used previously so that other
+        configurations are kept.
         <br/>
         <br/>
 
-        2. Update the current installation with an update site that's more recent following the update site instructions.
+        <strong>2.</strong> Update the current installation with an update site that's more recent following the update site instructions.
+        Note that due to a bug, updating Mac OS won't work properly for LiClipse versions lower than 4.0 (so, on <strong>MacOS</strong>,
+        if upgrading an install with version <strong>3.x or before, option 1 must</strong> be used).
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <br/>
         <br/>
 

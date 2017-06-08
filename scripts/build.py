@@ -15,20 +15,20 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-http://www.mediafire.com/file/uhh3bpqin7bn7mi/MD5_AND_INSTALL_INSTRUCTIONS.txt
-http://www.mediafire.com/file/9plpza5l41awfa6/LICENSE.TXT
-http://www.mediafire.com/file/ltdiwv5pzia2ow7/liclipse_3.6.0_win32.x86.exe
-http://www.mediafire.com/file/4xocnlfxbawjhgo/liclipse_3.6.0_win32.x86_64.exe
-http://www.mediafire.com/file/31508h0na9823ns/liclipse_3.6.0_macosx.cocoa.x86_64.dmg
-http://www.mediafire.com/file/8pdhyvf2xbpktnx/UPDATE_SITE_3.6.0.zip
-http://www.mediafire.com/file/okiagh1sjmw88x4/liclipse_3.6.0_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/file/t7193woj1p5pm5a/liclipse_3.6.0_linux.gtk.x86.tar.gz
-https://www.mediafire.com/folder/tztuzhz62bzvs/LiClipse_3.6.0
+http://www.mediafire.com/file/bzj59ljafimd9vv/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+http://www.mediafire.com/file/1pkc4da15wnvb41/LICENSE.TXT
+http://www.mediafire.com/file/pqvol33am14vbml/liclipse_4.0.0_win32.x86.exe
+http://www.mediafire.com/file/h2htumel4x8uhec/liclipse_4.0.0_win32.x86_64.exe
+http://www.mediafire.com/file/s5qczei26kot9z5/liclipse_4.0.0_macosx.cocoa.x86_64.dmg
+http://www.mediafire.com/file/dkaxk156r729490/UPDATE_SITE_4.0.0.zip
+http://www.mediafire.com/file/cs38ajdc0zkn1af/liclipse_4.0.0_linux.gtk.x86_64.tar.gz
+http://www.mediafire.com/file/bg87buannks1tfd/liclipse_4.0.0_linux.gtk.x86.tar.gz
+https://www.mediafire.com/folder/i5r5gz471fvqa/LiClipse_4.0.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '3.6.0',
+    'liclipse_version': '4.0.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
@@ -82,7 +82,7 @@ HEADER = '''
 
 
 
-<p><small>Copyright 2013-2017 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+<p><small>Copyright 2013-2017 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 '''
 
 #===================================================================================================
@@ -203,7 +203,7 @@ Choose the topic you're interested in...<br/>
 
     return '''
 %(li)s<br><br><br>
-<p><small>Copyright 2013-2017 - Brainwy Software Ltda.<br/>Hosted on GitHub Pages - Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+<p><small>Copyright 2013-2017 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}, open_source
 MANUAL_OPEN_SOURCE_HEADER = None
 
@@ -287,8 +287,8 @@ def main():
         line = line.strip()
         if not line:
             continue
-        if line.endswith('MD5_AND_INSTALL_INSTRUCTIONS.txt'):
-            DOWNLOAD_REPLACEMENTS['md5_and_install_instructions_url'] = line
+        if line.endswith('SHA256_AND_INSTALL_INSTRUCTIONS.txt'):
+            DOWNLOAD_REPLACEMENTS['sha256_and_install_instructions_url'] = line
 
         elif line.endswith('LICENSE.TXT'):
             DOWNLOAD_REPLACEMENTS['license_url'] = line
