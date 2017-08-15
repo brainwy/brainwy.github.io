@@ -2,4 +2,4 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ https://dl.bintray.com/fabioz/liclipsetext/1.1.0/$1 [R]
+RewriteRule ^(.*)$ https://dl.bintray.com/fabioz/liclipsetext/2.0.0/$1 [R]
