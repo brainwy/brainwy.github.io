@@ -9,5 +9,6 @@
     <child location='https://dl.bintray.com/fabioz/liclipsetext/1.0.0'/>
     <child location='https://dl.bintray.com/fabioz/liclipsetext/1.1.0'/>
     <child location='https://dl.bintray.com/fabioz/liclipsetext/2.0.0'/>
+    <child location='https://dl.bintray.com/fabioz/liclipsetext/2.1.0'/>
   </children>
 </repository>
