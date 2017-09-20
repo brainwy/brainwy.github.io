@@ -15,20 +15,20 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-http://www.mediafire.com/file/91dktuh6aq17uhd/liclipse_4.1.1_linux.gtk.x86.tar.gz
-http://www.mediafire.com/file/rwc4bk3nthtxcvv/liclipse_4.1.1_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/file/oq1211rd7d45b1b/liclipse_4.1.1_macosx.cocoa.x86_64.dmg
-http://www.mediafire.com/file/i4ordxgangytbuu/liclipse_4.1.1_win32.x86_64.exe
-http://www.mediafire.com/file/52tyeinl5z57fz9/UPDATE_SITE_4.1.1.zip
-http://www.mediafire.com/file/byab6zy39uayy66/liclipse_4.1.1_win32.x86.exe
-http://www.mediafire.com/file/zu5f810tbq5am3h/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-http://www.mediafire.com/file/8lhwd0cmbg79ik6/LICENSE.TXT
-https://www.mediafire.com/folder/9lvd44ll5q63q/LiClipse_4.1.1
+http://www.mediafire.com/file/j9zucr36bx771p3/liclipse_4.2.0_linux.gtk.x86.tar.gz
+http://www.mediafire.com/file/gdd8o5kqknr27nd/liclipse_4.2.0_linux.gtk.x86_64.tar.gz
+http://www.mediafire.com/file/nlc4mswfza6f8zj/liclipse_4.2.0_macosx.cocoa.x86_64.dmg
+http://www.mediafire.com/file/9hgdhnus12hz322/liclipse_4.2.0_win32.x86_64.exe
+http://www.mediafire.com/file/3v7qexgstfi8i5r/liclipse_4.2.0_win32.x86.exe
+http://www.mediafire.com/file/ucr9cc1st24xim3/UPDATE_SITE_4.2.0.zip
+http://www.mediafire.com/file/zm9poiz8crh8sk8/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+http://www.mediafire.com/file/0la86awt31ki66v/LICENSE.TXT
+https://www.mediafire.com/folder/4oxfo7yolxmkw/LiClipse_4.2.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '4.1.1',
+    'liclipse_version': '4.2.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
