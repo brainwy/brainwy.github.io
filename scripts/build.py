@@ -15,20 +15,20 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-http://www.mediafire.com/file/j9zucr36bx771p3/liclipse_4.2.0_linux.gtk.x86.tar.gz
-http://www.mediafire.com/file/gdd8o5kqknr27nd/liclipse_4.2.0_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/file/nlc4mswfza6f8zj/liclipse_4.2.0_macosx.cocoa.x86_64.dmg
-http://www.mediafire.com/file/9hgdhnus12hz322/liclipse_4.2.0_win32.x86_64.exe
-http://www.mediafire.com/file/3v7qexgstfi8i5r/liclipse_4.2.0_win32.x86.exe
-http://www.mediafire.com/file/ucr9cc1st24xim3/UPDATE_SITE_4.2.0.zip
-http://www.mediafire.com/file/zm9poiz8crh8sk8/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-http://www.mediafire.com/file/0la86awt31ki66v/LICENSE.TXT
-https://www.mediafire.com/folder/4oxfo7yolxmkw/LiClipse_4.2.0
+https://www.mediafire.com/file/uk3xytg34aulqtk/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file/tdgst6say2tfcig/LICENSE.TXT
+https://www.mediafire.com/file/mlkgpvrqtlvmv63/UPDATE%20SITE%204.3.0.zip
+https://www.mediafire.com/file/py4ac68pmdlb56i/liclipse_4.3.0_win32.x86.exe
+https://www.mediafire.com/file/jszv364ywj4zmqc/liclipse_4.3.0_win32.x86_64.exe
+https://www.mediafire.com/file/lxd53r5yoq6d5yl/liclipse_4.3.0_macosx.cocoa.x86_64.dmg
+https://www.mediafire.com/file/m0z48ul89mrbv5q/liclipse_4.3.0_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file/83wl3bmb13avtt1/liclipse_4.3.0_linux.gtk.x86.tar.gz
+https://www.mediafire.com/folder/1wny54ufjti3h/LiClipse_4.3.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '4.2.0',
+    'liclipse_version': '4.3.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
@@ -302,7 +302,7 @@ def main():
         elif line.endswith('macosx.cocoa.x86_64.dmg'):
             DOWNLOAD_REPLACEMENTS['macos_url'] = line
 
-        elif line.endswith('.zip') and 'UPDATE_SITE' in line:
+        elif line.endswith('.zip') and ('UPDATE_SITE' in line) or ('UPDATE%20SITE' in line):
             DOWNLOAD_REPLACEMENTS['update_site_url'] = line
 
         elif line.endswith('linux.gtk.x86_64.tar.gz'):
