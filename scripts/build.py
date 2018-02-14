@@ -82,7 +82,7 @@ HEADER = '''
 
 
 
-<p><small>Copyright 2013-2017 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2018 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 '''
 
 #===================================================================================================
@@ -203,7 +203,7 @@ Choose the topic you're interested in...<br/>
 
     return '''
 %(li)s<br><br><br>
-<p><small>Copyright 2013-2017 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2018 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}, open_source
 MANUAL_OPEN_SOURCE_HEADER = None
 
