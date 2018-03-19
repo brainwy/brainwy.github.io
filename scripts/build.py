@@ -15,20 +15,20 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-http://www.mediafire.com/file/32rf5fht851ncs2/LICENSE.TXT
-http://www.mediafire.com/file/v527h9pca5nf5uy/liclipse_4.5.1_linux.gtk.x86.tar.gz
-http://www.mediafire.com/file/fl2xgbczyb1zj74/liclipse_4.5.1_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/file/8c4m8xh7v380pul/liclipse_4.5.1_macosx.cocoa.x86_64.dmg
-http://www.mediafire.com/file/u79162wmb399n56/liclipse_4.5.1_win32.x86.exe
-http://www.mediafire.com/file/lou53d6ad6xq2zu/liclipse_4.5.1_win32.x86_64.exe
-http://www.mediafire.com/file/4x0yczwb96s9xd4/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-http://www.mediafire.com/file/if7hoofx5xjca54/UPDATE_SITE_4.5.1.zip
-http://www.mediafire.com/folder/dwad1rmz3sh4f/LiClipse_4.5.1
+http://www.mediafire.com/file/pqmpvzaigqy7yqg/LICENSE.TXT
+http://www.mediafire.com/file/rkxu42segmyz2kt/liclipse_4.5.2_linux.gtk.x86.tar.gz
+http://www.mediafire.com/file/nx9v19tako1p0ci/liclipse_4.5.2_linux.gtk.x86_64.tar.gz
+http://www.mediafire.com/file/5yps89j3epslbe9/liclipse_4.5.2_macosx.cocoa.x86_64.dmg
+http://www.mediafire.com/file/odq93hk4qjlgu1p/liclipse_4.5.2_win32.x86.exe
+http://www.mediafire.com/file/23er5rucz0ma1do/liclipse_4.5.2_win32.x86_64.exe
+http://www.mediafire.com/file/ulct4a533y1n7m8/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+http://www.mediafire.com/file/vdtt250rll93b22/UPDATE_SITE_4.5.2.zip
+http://www.mediafire.com/folder/eeceedbdnsbnb/LiClipse_4.5.2
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '4.5.1',
+    'liclipse_version': '4.5.2',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
