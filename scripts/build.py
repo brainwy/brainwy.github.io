@@ -15,20 +15,20 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-http://www.mediafire.com/folder/b4cp9k9yco6r3/LiClipse_5.1.0
-http://www.mediafire.com/file/jc3jo1ktktmklfm/liclipse_5.1.0_linux.gtk.x86.tar.gz
-http://www.mediafire.com/file/2tbp1fcfwqp0thi/liclipse_5.1.0_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/file/sk2f6mosf8xult2/liclipse_5.1.0_macosx.cocoa.x86_64.dmg
-http://www.mediafire.com/file/wvq61ie2wes75rc/UPDATE_SITE_5.1.0.zip
-http://www.mediafire.com/file/bd0go0lmvb4zysd/liclipse_5.1.0_win32.x86.exe
-http://www.mediafire.com/file/1b7ebws07noudjr/liclipse_5.1.0_win32.x86_64.exe
-http://www.mediafire.com/file/i98gb74xa27otwi/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-http://www.mediafire.com/file/ky8j7pzcc9ouknk/LICENSE.TXT
+https://www.mediafire.com/file/cb623n83ni1rdkk/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file/5p3g478ktoxfap6/LICENSE.TXT
+https://www.mediafire.com/file/98yklaiceq1y1vo/UPDATE_SITE_5.1.2.zip
+https://www.mediafire.com/file/vfdpnl3050msq40/liclipse_5.1.2_win32.x86.exe
+https://www.mediafire.com/file/2vb2xyiq6dtmb1p/liclipse_5.1.2_win32.x86_64.exe
+https://www.mediafire.com/file/82edn194188fone/liclipse_5.1.2_macosx.cocoa.x86_64.dmg
+https://www.mediafire.com/file/r7yey73xinxn87g/liclipse_5.1.2_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file/ddddmfhqwfnp9pz/liclipse_5.1.2_linux.gtk.x86.tar.gz
+http://www.mediafire.com/folder/vkrjpxsd2kgh9/LiClipse_5.1.2
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '5.1.0',
+    'liclipse_version': '5.1.2',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
