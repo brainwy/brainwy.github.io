@@ -15,18 +15,18 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file/b60mm8o8quc7trr/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file/uvri4e9dfd4m9b8/LICENSE.TXT
-https://www.mediafire.com/file/qgc4cytbruhp67s/UPDATE_SITE_5.3.0.zip
-https://www.mediafire.com/file/9ke8qqeerz67ioy/liclipse_5.3.0_win32.x86_64.exe
-https://www.mediafire.com/file/c0dcsho551y0brr/liclipse_5.3.0_macosx.cocoa.x86_64.dmg
-https://www.mediafire.com/file/w6tq0vuzynd2b06/liclipse_5.3.0_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/folder/3aqmbz07ghp1s/LiClipse_5.3.0
+http://www.mediafire.com/file/610a6z3n24oe8hd/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+http://www.mediafire.com/file/r47b9quktus74dq/LICENSE.TXT
+http://www.mediafire.com/file/nl7ptt9lhchva10/UPDATE_SITE_6.0.0.zip
+http://www.mediafire.com/file/23dcorlwlnjeljp/liclipse_6.0.0_win32.x86_64.exe
+http://www.mediafire.com/file/ve32xytlixmlg3x/liclipse_6.0.0_macosx.cocoa.x86_64.dmg
+http://www.mediafire.com/file/ujf4h8r99qcm7d4/liclipse_6.0.0_linux.gtk.x86_64.tar.gz
+http://www.mediafire.com/folder/qt80cbvc7s5jj/LiClipse_6.0.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '5.3.0',
+    'liclipse_version': '6.0.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
