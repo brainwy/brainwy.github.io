@@ -15,18 +15,18 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-http://www.mediafire.com/file/610a6z3n24oe8hd/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-http://www.mediafire.com/file/r47b9quktus74dq/LICENSE.TXT
-http://www.mediafire.com/file/nl7ptt9lhchva10/UPDATE_SITE_6.0.0.zip
-http://www.mediafire.com/file/23dcorlwlnjeljp/liclipse_6.0.0_win32.x86_64.exe
-http://www.mediafire.com/file/ve32xytlixmlg3x/liclipse_6.0.0_macosx.cocoa.x86_64.dmg
-http://www.mediafire.com/file/ujf4h8r99qcm7d4/liclipse_6.0.0_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/folder/qt80cbvc7s5jj/LiClipse_6.0.0
+https://www.mediafire.com/file/wnm6uza7sdowr8w/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file/uym4fbrim4e8aep/LICENSE.TXT
+https://www.mediafire.com/file/yj89lwcqw13hwlh/UPDATE_SITE_6.1.0.zip
+https://www.mediafire.com/file/wkc3y98nc15pxuc/liclipse_6.1.0_win32.x86_64.exe
+https://www.mediafire.com/file/yau5fhnopa6zx04/liclipse_6.1.0_macosx.cocoa.x86_64.dmg
+https://www.mediafire.com/file/kyxm0r9l91jl9h8/liclipse_6.1.0_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/folder/xib41lf29785n/LiClipse_6.1.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '6.0.0',
+    'liclipse_version': '6.1.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
@@ -80,7 +80,7 @@ HEADER = '''
 
 
 
-<p><small>Copyright 2013-2019 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2020 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 '''
 
 #===================================================================================================
@@ -201,7 +201,7 @@ Choose the topic you're interested in...<br/>
 
     return '''
 %(li)s<br><br><br>
-<p><small>Copyright 2013-2019 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2020 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}, open_source
 MANUAL_OPEN_SOURCE_HEADER = None
 
