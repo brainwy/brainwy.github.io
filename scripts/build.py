@@ -15,15 +15,6 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file/7l8gp6s6exb8bpw/LICENSE.TXT
-https://www.mediafire.com/file/gbbsevptegyanqc/liclipse_6.3.0_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file/7tlqxhknfqih3fs/liclipse_6.3.0_macosx.cocoa.x86_64.dmg
-https://www.mediafire.com/file/lzk5x81jtzdf82k/liclipse_6.3.0_win32.x86_64.exe
-https://www.mediafire.com/file/6l50db815bdua4x/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file/euranurcck6mxmc/UPDATE_SITE_6.3.0.zip
-https://www.mediafire.com/folder/8veom70vlzdwu/LiClipse_6.3.0
-
-
 http://www.mediafire.com/file/0wx8n0nbxznq0cq/LICENSE.TXT
 http://www.mediafire.com/file/lz8nhzf35a8wxfy/liclipse_7.0.0_linux.gtk.x86_64.tar.gz
 http://www.mediafire.com/file/tv5jvx061tvr17a/liclipse_7.0.0_macosx.cocoa.x86_64.dmg
