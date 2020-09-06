@@ -22,11 +22,20 @@ https://www.mediafire.com/file/lzk5x81jtzdf82k/liclipse_6.3.0_win32.x86_64.exe
 https://www.mediafire.com/file/6l50db815bdua4x/SHA256_AND_INSTALL_INSTRUCTIONS.txt
 https://www.mediafire.com/file/euranurcck6mxmc/UPDATE_SITE_6.3.0.zip
 https://www.mediafire.com/folder/8veom70vlzdwu/LiClipse_6.3.0
+
+
+http://www.mediafire.com/file/0wx8n0nbxznq0cq/LICENSE.TXT
+http://www.mediafire.com/file/lz8nhzf35a8wxfy/liclipse_7.0.0_linux.gtk.x86_64.tar.gz
+http://www.mediafire.com/file/tv5jvx061tvr17a/liclipse_7.0.0_macosx.cocoa.x86_64.dmg
+http://www.mediafire.com/file/b5osg46j2g6xre0/liclipse_7.0.0_win32.x86_64.exe
+http://www.mediafire.com/file/wbapwlrhlujwrb0/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+http://www.mediafire.com/file/tqcvqgsswhpakgw/UPDATE_SITE_7.0.0.zip
+http://www.mediafire.com/folder/qwvaelzph9776/LiClipse_7.0.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '6.3.0',
+    'liclipse_version': '7.0.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
