@@ -15,18 +15,18 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-http://www.mediafire.com/file/0wx8n0nbxznq0cq/LICENSE.TXT
-http://www.mediafire.com/file/lz8nhzf35a8wxfy/liclipse_7.0.0_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/file/tv5jvx061tvr17a/liclipse_7.0.0_macosx.cocoa.x86_64.dmg
-http://www.mediafire.com/file/b5osg46j2g6xre0/liclipse_7.0.0_win32.x86_64.exe
-http://www.mediafire.com/file/wbapwlrhlujwrb0/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-http://www.mediafire.com/file/tqcvqgsswhpakgw/UPDATE_SITE_7.0.0.zip
-http://www.mediafire.com/folder/qwvaelzph9776/LiClipse_7.0.0
+http://www.mediafire.com/file/o6sq1y9rzc4itl3/LICENSE.TXT
+http://www.mediafire.com/file/dusbchd50ch2bd4/liclipse_7.0.1_linux.gtk.x86_64.tar.gz
+http://www.mediafire.com/file/d8v8ubpz8fkfy78/liclipse_7.0.1_macosx.cocoa.x86_64.dmg
+http://www.mediafire.com/file/glm0x139vbbcse7/liclipse_7.0.1_win32.x86_64.exe
+http://www.mediafire.com/file/jiqlkvq9sxiebep/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+http://www.mediafire.com/file/x22w3vhperb4rbu/UPDATE_SITE_7.0.1.zip
+http://www.mediafire.com/folder/xgwnm3qxxsjxd/LiClipse_7.0.1
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '7.0.0',
+    'liclipse_version': '7.0.1',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
