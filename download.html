@@ -68,11 +68,11 @@
                 
     	<h1>Installing LiClipse</h1>
     	The recommended way of using LiClipse is by downloading the native installer for your platform, which provides a pre-configured
-        standalone for Windows (32 bits or 64 bits), Mac OS (64 bits) or Linux (32 bits or 64 bits).
+        standalone for Windows, Mac OS or Linux.
         <br/>
         <br/>
         However, it's also possible to install it through the update site:<br/><a href="http://update.liclipse.com/latest">http://update.liclipse.com/latest</a><br/>
-        (note that you must have Java 8 installed in this case -- see details on the Update Site Install section).
+        using a base Eclipse install (note that you must have Java 8 installed in this case -- see details on the Update Site Install section).
         <br/>
         <br/>
 
@@ -92,7 +92,7 @@
                 <a href="http://www.mediafire.com/file/x22w3vhperb4rbu/UPDATE_SITE_7.0.1.zip">LiClipse 7.0.1 Local Update Site</a>
             </li>
         </ul>
-        Note that 32 bit versions are no longer available (so, if you need to work on a 32 bit machine,
+        Note that 32 bit standalone versions are no longer available (so, if you need to work on a 32 bit machine,
         please use an older version of LiClipse).
         <br/>
         <br/>
@@ -110,14 +110,6 @@
         <br/>
         <br/>
 
-        Note that for Mac OS 32 bits, the install must be done using the provided update site using a base Eclipse install.
-        In this case, it's recommended to download the Eclipse Platform Runtime Binary from
-        <a href="http://download.eclipse.org/eclipse/downloads">http://download.eclipse.org/eclipse/downloads</a>
-        -- or a different Eclipse based bundle from your choice --
-        and install LiClipse as a plugin using the provided update site.
-        <br/>
-        <br/>
-
         <strong>Install Instructions</strong>
         <ul>
             <li><a href="#windows">Native Windows Install</a></li>
@@ -131,17 +123,9 @@
 
         <hr/><h2 id="windows">Native Windows Install</h2>
 
-        Download the .exe file from <a href="http://www.mediafire.com/folder/xgwnm3qxxsjxd/LiClipse_7.0.1">MediaFire</a> and run it locally, following the installer instructions.
+        Download the .exe file from <a href="http://www.mediafire.com/file/glm0x139vbbcse7/liclipse_7.0.1_win32.x86_64.exe">MediaFire</a> and run it locally, following the installer instructions.
         <br/>
         <br/>
-        Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
-        <br/>
-        <br/>
-        Note 2: you may have to unblock the file to be executed as pointed in:
-        <a href="https://blogs.msdn.microsoft.com/delay/p/unblockingdownloadedfile/">https://blogs.msdn.microsoft.com/delay/p/unblockingdownloadedfile/</a>
-        <br/>
-        <br/>
-
 
         <br/><hr/><h2 id="macos">Native Mac OS Install</h2>
 
@@ -161,29 +145,24 @@
         <br/>
         <br/>
 
-        This happens because LiClipse isn't currently signed or distributed through the Mac App Store.
+        This happens because LiClipse isn't currently signed nor distributed through the Mac App Store.
         <br/>
         <br/>
 
-        To overcome this, it's possible to do the following:
+        To overcome this, it's possible to remove the quarantine flag from the file by running:
+        <br/>
+        <br/>
 
 
-        <ul>
-        <li><strong>Step 1</strong> - Open terminal and run the following command</li>
+        <strong>xattr -d com.apple.quarantine /Applications/LiClipse.app</strong><br/>
 
+        <strong>xattr -d com.apple.quarantine /Applications/LiClipse.app/MacOS/LiClipse</strong>
 
-        <ul><li><strong>sudo spctl --master-disable</strong></li></ul>
+        <br/>
+        <br/>
+        (note that the path may have to be updated if you installed it somewhere else).
+        <br/>
 
-        <li><strong>Step 2</strong> - Close and then reopen System Preferences - Privacy and "Anywhere" is now added to the list.</li>
-
-        <li><strong>Step 3</strong> - Make sure that "Anywhere" is now selected</li>
-
-        <li><strong>Step 4</strong> - Run LiClipse App, and you will be presented with the traditional dialog to open the app</li>
-
-        <li><strong>Step 5</strong> - Once you successfully run the app, you should then put the system back into protected mode with:</li>
-
-        <ul><li><strong>sudo spctl --master-enable</strong></li></ul>
-        </ul>
         <br/>
         <br/>
 
@@ -192,9 +171,6 @@
 
 
         Download the .tar.gz from <a href="http://www.mediafire.com/folder/xgwnm3qxxsjxd/LiClipse_7.0.1">MediaFire</a>.
-        <br/>
-        <br/>
-        Note: 64 bits installers, end with x86_64 and 32 bit installers end with x86.
         <br/>
         <br/>
 
