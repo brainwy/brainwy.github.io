@@ -15,13 +15,13 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-http://www.mediafire.com/file/o6sq1y9rzc4itl3/LICENSE.TXT
-http://www.mediafire.com/file/dusbchd50ch2bd4/liclipse_7.0.1_linux.gtk.x86_64.tar.gz
-http://www.mediafire.com/file/d8v8ubpz8fkfy78/liclipse_7.0.1_macosx.cocoa.x86_64.dmg
-http://www.mediafire.com/file/glm0x139vbbcse7/liclipse_7.0.1_win32.x86_64.exe
-http://www.mediafire.com/file/jiqlkvq9sxiebep/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-http://www.mediafire.com/file/x22w3vhperb4rbu/UPDATE_SITE_7.0.1.zip
-http://www.mediafire.com/folder/xgwnm3qxxsjxd/LiClipse_7.0.1
+https://www.mediafire.com/file/o6sq1y9rzc4itl3/LICENSE.TXT
+https://www.mediafire.com/file/dusbchd50ch2bd4/liclipse_7.0.1_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file/d8v8ubpz8fkfy78/liclipse_7.0.1_macosx.cocoa.x86_64.dmg
+https://www.mediafire.com/file/glm0x139vbbcse7/liclipse_7.0.1_win32.x86_64.exe
+https://www.mediafire.com/file/jiqlkvq9sxiebep/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file/x22w3vhperb4rbu/UPDATE_SITE_7.0.1.zip
+https://www.mediafire.com/folder/xgwnm3qxxsjxd/LiClipse_7.0.1
 '''
 
 DOWNLOAD_REPLACEMENTS = {
