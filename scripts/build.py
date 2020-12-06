@@ -4,7 +4,6 @@ Created on Sep 3, 2013
 @author: Fabio
 
 Also in:
-    http://liclipse-sagi.rhcloud.com
     http://brainwy.github.io
 '''
 import os
@@ -15,18 +14,18 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file/o6sq1y9rzc4itl3/LICENSE.TXT
-https://www.mediafire.com/file/dusbchd50ch2bd4/liclipse_7.0.1_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file/d8v8ubpz8fkfy78/liclipse_7.0.1_macosx.cocoa.x86_64.dmg
-https://www.mediafire.com/file/glm0x139vbbcse7/liclipse_7.0.1_win32.x86_64.exe
-https://www.mediafire.com/file/jiqlkvq9sxiebep/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file/x22w3vhperb4rbu/UPDATE_SITE_7.0.1.zip
-https://www.mediafire.com/folder/xgwnm3qxxsjxd/LiClipse_7.0.1
+http://www.mediafire.com/file/54wpnmu5sau689m/LICENSE.TXT
+http://www.mediafire.com/file/ojqvxy1pgx3ubun/liclipse_7.1.0_linux.gtk.x86_64.tar.gz
+http://www.mediafire.com/file/4avujhmdvxhyu49/liclipse_7.1.0_macosx.cocoa.x86_64.dmg
+http://www.mediafire.com/file/5s0tge8t4wwkh89/liclipse_7.1.0_win32.x86_64.exe
+http://www.mediafire.com/file/qcc3u8lcelf65zs/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+http://www.mediafire.com/file/xjguzldw8b10b2t/UPDATE_SITE_7.1.0.zip
+http://www.mediafire.com/folder/4leu5kah4ddtr/LiClipse_7.1.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '7.0.1',
+    'liclipse_version': '7.1.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
