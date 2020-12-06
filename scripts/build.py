@@ -97,12 +97,15 @@ def apply_to(filename, header=None, path=None, template_contents=None, kwargs=No
 
 def template_replace(contents, kwargs):
 
-    to_replace = set(['title', 'image_area', 'quote_area', 'right_area', 'contents_area', 'body', 'header'])
-    to_replace.update(kwargs.keys())
-
+    to_replace = ['body', 'title', 'image_area', 'quote_area', 'right_area', 'contents_area', 'header']
     for r in to_replace:
         c = kwargs.get(r, '')
         contents = contents.replace('%(' + r + ')s', c)
+
+    for r in kwargs:
+        c = kwargs.get(r, '')
+        contents = contents.replace('%(' + r + ')s', c)
+
     return contents
 
 #===================================================================================================
@@ -174,7 +177,7 @@ else:
 def create_manual_header():
     lis = []
     open_source = []
-    for file_basename, file_info in FILE_TO_INFO.iteritems():
+    for file_basename, file_info in FILE_TO_INFO.items():
         if not file_info.open_source:
             lis.append('<p><a href="%s">%s</a></p>' % (
                 os.path.basename(file_info.filename),
@@ -239,7 +242,7 @@ def main():
     # Manual
     if os.path.exists(help_location):
         create_manual_page()
-        values = FILE_TO_INFO.values()
+        values = list(FILE_TO_INFO.values())
         open_source_values = [x for x in values if x.open_source]
 
         for i, info in enumerate(values):
@@ -267,7 +270,7 @@ def main():
                 next = os.path.basename(open_source_values[i+1].filename)
                 title_next = open_source_values[i+1].title
 
-            print 'applying to:', info.filename
+            print('applying to:', info.filename)
             title_next = title_next.replace('&nbsp;', '')
             title_prev = title_prev.replace('&nbsp;', '')
             title_next = '(%s)' % title_next
@@ -340,4 +343,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    print 'Generation finished'
+    print('Generation finished')
