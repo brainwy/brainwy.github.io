@@ -80,24 +80,25 @@
         <br/>
         <ul>
             <li>
-                <a href="https://www.mediafire.com/file/1zwyjunnvl3na4m/liclipse_7.3.0_win32.x86_64.exe">LiClipse 7.3.0 Windows (64 bits)</a>
+                <a href="https://www.mediafire.com/file/t5d0xtwtp7l8rc3/liclipse_8.0.0_win32.x86_64.exe">LiClipse 8.0.0 Windows (64 bits)</a>
             </li>
             <li>
-                <a href="https://www.mediafire.com/file/xw7ef6ia92588mw/liclipse_7.3.0_macosx.cocoa.x86_64.dmg">LiClipse 7.3.0 Mac OS (64 bits)</a>
+                <a href="https://www.mediafire.com/file/wroxg0bemv1mq5m/liclipse_8.0.0_linux.gtk.x86_64.tar.gz">LiClipse 8.0.0 Linux (64 bits)</a>
             </li>
             <li>
-                <a href="https://www.mediafire.com/file/ve681xsdgovki7q/liclipse_7.3.0_linux.gtk.x86_64.tar.gz">LiClipse 7.3.0 Linux (64 bits)</a>
+                <a href="https://www.mediafire.com/file/gaet71iufahajbv/liclipse_8.0.0_macosx.cocoa.x86_64.tar.gz">LiClipse 8.0.0 Mac OS (64 bits)</a>
             </li>
             <li>
-                <a href="https://www.mediafire.com/file/klylbb0h9tw15re/UPDATE_SITE_7.3.0.zip">LiClipse 7.3.0 Local Update Site</a>
+                <a href="https://www.mediafire.com/file/orknj61u89yd1ix/UPDATE_SITE_8.0.0.zip">LiClipse 8.0.0 Local Update Site</a>
             </li>
+            <strong>Important for Mac:</strong><br>See <a href="#macos">instructions</a> to fix "LiClipse.app" is damaged and can't be opened issue.
         </ul>
         Note that 32 bit standalone versions are no longer available (so, if you need to work on a 32 bit machine,
         please use an older version of LiClipse).
         <br/>
         <br/>
         It's possible to verify the SHA256 of the downloaded file in:
-        <a href="https://www.mediafire.com/file/o28x437q6hh2ruk/SHA256_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 7.3.0 files SHA256</a>.
+        <a href="https://www.mediafire.com/file/92a7x7wcec934fb/SHA256_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 8.0.0 files SHA256</a>.
         <br/>
         <br/>
         Older versions may be downloaded from <a href="https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse">MediaFire</a>
@@ -123,13 +124,13 @@
 
         <hr/><h2 id="windows">Native Windows Install</h2>
 
-        Download the .exe file from <a href="https://www.mediafire.com/file/1zwyjunnvl3na4m/liclipse_7.3.0_win32.x86_64.exe">MediaFire</a> and run it locally, following the installer instructions.
+        Download the .exe file from <a href="https://www.mediafire.com/file/t5d0xtwtp7l8rc3/liclipse_8.0.0_win32.x86_64.exe">MediaFire</a> and run it locally, following the installer instructions.
         <br/>
         <br/>
 
         <br/><hr/><h2 id="macos">Native Mac OS Install</h2>
 
-        Download the .dmg file from <a href="https://www.mediafire.com/folder/nx2e1ogp4laom/LiClipse_7.3.0">MediaFire</a>, mount it as a disk and copy it (drag it) to the Applications dir.
+        Download the .tar.gz file from <a href="https://www.mediafire.com/folder/x8c4mgu1nbhic/LiClipse_8.0.0">MediaFire</a>, double-click to extract it in the Downloads Folder then move it (drag it) to the <strong>/Applications</strong> dir.
         <br/>
         <br/>
 
@@ -137,7 +138,7 @@
         <br/>
         <br/>
 
-        On latest Mac OS X versions, after extracting the DMG, when executing LiClipse.app, you may get an error such as:
+        On latest Mac OS X versions, after extracting the .tar.gz, when executing LiClipse.app, you may get an error such as:
         <br/>
         <br/>
 
@@ -154,14 +155,14 @@
         <br/>
 
 
-        <strong>xattr -d com.apple.quarantine /Applications/LiClipse.app</strong><br/>
-
-        <strong>xattr -d com.apple.quarantine /Applications/LiClipse.app/MacOS/LiClipse</strong>
-
+        <strong>xattr -d com.apple.quarantine /Applications/LiClipse.app</strong>
         <br/>
         <br/>
         (note that the path may have to be updated if you installed it somewhere else).
         <br/>
+        <br/>
+        p.s.: if you want to verify the integrity of the download, it's possible to verify the SHA256 of the downloaded file following the instructions in:
+        <a href="https://www.mediafire.com/file/92a7x7wcec934fb/SHA256_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 8.0.0 files SHA256</a>.
 
         <br/>
         <br/>
@@ -170,7 +171,7 @@
         <br/><hr/><h2 id="linux">Native Linux Install</h2>
 
 
-        Download the .tar.gz from <a href="https://www.mediafire.com/folder/nx2e1ogp4laom/LiClipse_7.3.0">MediaFire</a>.
+        Download the .tar.gz from <a href="https://www.mediafire.com/folder/x8c4mgu1nbhic/LiClipse_8.0.0">MediaFire</a>.
         <br/>
         <br/>
 
@@ -204,7 +205,7 @@
         <br/><hr/><h2 id="update_site">Update Site Install</h2>
 
         To use the update site, download the <strong>UPDATE SITE.zip</strong> from
-        <a href="https://www.mediafire.com/folder/nx2e1ogp4laom/LiClipse_7.3.0">MediaFire</a>,
+        <a href="https://www.mediafire.com/folder/x8c4mgu1nbhic/LiClipse_8.0.0">MediaFire</a>,
         extract it in a folder, or use the URL: <a href="http://update.liclipse.com/latest">http://update.liclipse.com/latest</a> then,
         on Eclipse (or a previously downloaded LiClipse) go to:
         <br/>
@@ -221,9 +222,9 @@
         <br/>
 
 
-        <h3>Requirement: Eclipse 4.6</h3>
+        <h3>Requirement: Eclipse 4.20</h3>
 
-        Note that to be installed, LiClipse requires Eclipse 4.6 (Neon) onwards.
+        Note that to be installed, LiClipse requires Eclipse 4.20 (2021-06) onwards.
         <br/>
         <br/>
 
