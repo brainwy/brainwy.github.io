@@ -15,17 +15,17 @@ import warnings
 
 DOWNLOADS = '''
 https://www.mediafire.com/file/q4kh0wungtwkhrt/LICENSE.TXT
-https://www.mediafire.com/file/shirsfelnp13a63/liclipse_8.1.0_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file/z1jtqfr7p9g1bat/liclipse_8.1.0_macosx.cocoa.x86_64.tar.gz
-https://www.mediafire.com/file/6s90buz418wa5fj/liclipse_8.1.0_win32.x86_64.exe
+https://www.mediafire.com/file/shirsfelnp13a63/liclipse_8.2.0_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file/z1jtqfr7p9g1bat/liclipse_8.2.0_macosx.cocoa.x86_64.tar.gz
+https://www.mediafire.com/file/6s90buz418wa5fj/liclipse_8.2.0_win32.x86_64.exe
 https://www.mediafire.com/file/at36cl5mmadv73g/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file/hmzxnvakp2ch1qs/UPDATE_SITE_8.1.0.zip
-https://www.mediafire.com/folder/8635dvb2py4q7/LiClipse_8.1.0
+https://www.mediafire.com/file/hmzxnvakp2ch1qs/UPDATE_SITE_8.2.0.zip
+https://www.mediafire.com/folder/8635dvb2py4q7/LiClipse_8.2.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '8.1.0',
+    'liclipse_version': '8.2.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
@@ -79,7 +79,7 @@ HEADER = '''
 
 
 
-<p><small>Copyright 2013-2021 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2022 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 '''
 
 #===================================================================================================
@@ -203,7 +203,7 @@ Choose the topic you're interested in...<br/>
 
     return '''
 %(li)s<br><br><br>
-<p><small>Copyright 2013-2021 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2022 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}, open_source
 MANUAL_OPEN_SOURCE_HEADER = None
 

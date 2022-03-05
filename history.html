@@ -61,12 +61,36 @@
 
 
 
-<p><small>Copyright 2013-2021 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2022 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 
             </header>
             <section>
                 
     <h3>Releases history</h3>
+        <h3>Release Highlights for LiClipse 8.2.0</h3>
+        <ul>
+        	<li>Updated to Eclipse <strong>2021-12 (4.22)</strong>.</li>
+        	<li>Updated PyDev to 9.3.0.</li>
+        	<ul>
+				<li>Debugging</li>
+				<ul>
+					<li>Fixed issue where the variable children wouldn't expand correctly.</li>
+					<li>Fixed some case where automatic connection to subprocesses wouldn't work.</li>
+					<li>Debugging with Pandas is much improved with the addition of some custom converters.</li>
+					<li>Opt-in support to show paused greenlets by setting <strong>GEVENT_SHOW_PAUSED_GREENLETS=1</strong>.</li>
+					<li>Support for newer versions of gevent.</li>
+					<li>Information on user settings paths is cached to fix issue with slow debugging using pipenv project.</li>
+					<li>A warning is shown if getting some attribute / getting its repr is slow.</li>
+					<li>Interactively inspect matplotlib plots when the QtAgg backend is used.</li>
+					<li>Support for PySide2.</li>
+					<li>Better error messages in case Python 3.11 frozen modules are being used.</li>
+					<li><strong>Note</strong>: this will be the <strong>last</strong> debugger version supporting <strong>Python 2.7</strong>.</li>
+					<li>Newer releases will target only <strong>Python 3.6</strong> onwards.</li>
+				</ul>
+        	</ul>
+        </ul>
+
+
         <h3>Release Highlights for LiClipse 8.1.0</h3>
         <ul>
         	<li>Updated to Eclipse <strong>2021-09 (4.21)</strong>.</li>
