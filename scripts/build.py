@@ -14,13 +14,13 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file/q4kh0wungtwkhrt/LICENSE.TXT
-https://www.mediafire.com/file/shirsfelnp13a63/liclipse_8.2.0_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file/z1jtqfr7p9g1bat/liclipse_8.2.0_macosx.cocoa.x86_64.tar.gz
-https://www.mediafire.com/file/6s90buz418wa5fj/liclipse_8.2.0_win32.x86_64.exe
-https://www.mediafire.com/file/at36cl5mmadv73g/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file/hmzxnvakp2ch1qs/UPDATE_SITE_8.2.0.zip
-https://www.mediafire.com/folder/8635dvb2py4q7/LiClipse_8.2.0
+https://www.mediafire.com/file/t1drgji0m63wqel/LICENSE.TXT
+https://www.mediafire.com/file/ssoop12tp1snzs7/liclipse_8.2.0_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file/ycuiec8ypcpkj1v/liclipse_8.2.0_macosx.cocoa.x86_64.tar.gz
+https://www.mediafire.com/file/l03085emjy6gp0m/liclipse_8.2.0_win32.x86_64.exe
+https://www.mediafire.com/file/pana4yclugwduto/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file/y6ujk7v7q0imhvw/UPDATE_SITE_8.2.0.zip
+https://www.mediafire.com/folder/fxkt3h14b9cpi/LiClipse_8.2.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
