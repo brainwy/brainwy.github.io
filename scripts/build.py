@@ -7,25 +7,24 @@ Also in:
     http://brainwy.github.io
 '''
 import os
-import pyodict
 import shutil
 import warnings
 
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file/t1drgji0m63wqel/LICENSE.TXT
-https://www.mediafire.com/file/ssoop12tp1snzs7/liclipse_8.2.0_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file/ycuiec8ypcpkj1v/liclipse_8.2.0_macosx.cocoa.x86_64.tar.gz
-https://www.mediafire.com/file/l03085emjy6gp0m/liclipse_8.2.0_win32.x86_64.exe
-https://www.mediafire.com/file/pana4yclugwduto/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file/y6ujk7v7q0imhvw/UPDATE_SITE_8.2.0.zip
-https://www.mediafire.com/folder/fxkt3h14b9cpi/LiClipse_8.2.0
+https://www.mediafire.com/file/1a8iia75dh0lbzb/LICENSE.TXT
+https://www.mediafire.com/file/511fqfc7w9f592p/liclipse_9.0.0_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file/ks1e8pymgewjnrx/liclipse_9.0.0_macosx.cocoa.x86_64.tar.gz
+https://www.mediafire.com/file/81b3cuuwobnky6r/liclipse_9.0.0_win32.x86_64.exe
+https://www.mediafire.com/file/9lx7pp8x4r2p0m8/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file/fh2y20l2sv4pxmu/UPDATE_SITE_9.0.0.zip
+https://www.mediafire.com/folder/yoer5nboqgoi8/LiClipse_9.0.0
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '8.2.0',
+    'liclipse_version': '9.0.0',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
@@ -142,7 +141,7 @@ class Info:
         self.filename = None
 
 
-FILE_TO_INFO = pyodict.odict([
+FILE_TO_INFO = dict([
     ('change_color_theme.html', Info('Changing colors', False)),
     ('launch.html', Info('Running/Launching', False)),
     ('search.html', Info('Improved Search', False)),
