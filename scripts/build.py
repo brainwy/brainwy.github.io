@@ -13,18 +13,18 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file/1a8iia75dh0lbzb/LICENSE.TXT
-https://www.mediafire.com/file/511fqfc7w9f592p/liclipse_9.0.0_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file/ks1e8pymgewjnrx/liclipse_9.0.0_macosx.cocoa.x86_64.tar.gz
-https://www.mediafire.com/file/81b3cuuwobnky6r/liclipse_9.0.0_win32.x86_64.exe
-https://www.mediafire.com/file/9lx7pp8x4r2p0m8/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file/fh2y20l2sv4pxmu/UPDATE_SITE_9.0.0.zip
-https://www.mediafire.com/folder/yoer5nboqgoi8/LiClipse_9.0.0
+https://www.mediafire.com/file/7t1t64nxrtwpf55/LICENSE.TXT
+https://www.mediafire.com/file/w2yok172hzgbwro/liclipse_9.0.1_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file/5ao858sjvo8gibh/liclipse_9.0.1_macosx.cocoa.x86_64.tar.gz
+https://www.mediafire.com/file/v9mkv1m1thnkti4/liclipse_9.0.1_win32.x86_64.exe
+https://www.mediafire.com/file/6vcqafull0in5k8/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file/vyns9nmyu5zlg87/UPDATE+SITE+9.0.1.zip
+https://www.mediafire.com/folder/e7h5916aq2mki/LiClipse_9.0.1
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '9.0.0',
+    'liclipse_version': '9.0.1',
 }
 
 help_location = r'X:\liclipse\plugins\com.brainwy.liclipse.help'
@@ -301,7 +301,7 @@ def main():
         elif line.endswith('macosx.cocoa.x86_64.tar.gz'):
             DOWNLOAD_REPLACEMENTS['macos_url'] = line
 
-        elif line.endswith('.zip') and ('UPDATE_SITE' in line) or ('UPDATE%20SITE' in line):
+        elif line.endswith('.zip') and ('UPDATE_SITE' in line) or ('UPDATE%20SITE' in line) or ('UPDATE+SITE' in line):
             DOWNLOAD_REPLACEMENTS['update_site_url'] = line
 
         elif line.endswith('linux.gtk.x86_64.tar.gz'):
