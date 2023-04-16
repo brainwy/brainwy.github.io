@@ -61,7 +61,7 @@
 
 
 
-<p><small>Copyright 2013-2022 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2023 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 
             </header>
             <section>
@@ -80,25 +80,27 @@
         <br/>
         <ul>
             <li>
-                <a href="https://www.mediafire.com/file/v9mkv1m1thnkti4/liclipse_9.0.1_win32.x86_64.exe">LiClipse 9.0.1 Windows (64 bits)</a>
+                <a href="https://www.mediafire.com/file_premium/lg3vafz4kky74rh/liclipse_10.0.0_win32.x86_64.exe">LiClipse 10.0.0 Windows (64 bits)</a>
             </li>
             <li>
-                <a href="https://www.mediafire.com/file/w2yok172hzgbwro/liclipse_9.0.1_linux.gtk.x86_64.tar.gz">LiClipse 9.0.1 Linux (64 bits)</a>
+                <a href="https://www.mediafire.com/file_premium/vtiff9ynid04bbq/liclipse_10.0.0_linux.gtk.x86_64.tar.gz">LiClipse 10.0.0 Linux (64 bits)</a>
             </li>
             <li>
-                <a href="https://www.mediafire.com/file/5ao858sjvo8gibh/liclipse_9.0.1_macosx.cocoa.x86_64.tar.gz">LiClipse 9.0.1 Mac OS (64 bits)</a>
+                <a href="https://www.mediafire.com/file_premium/28i3f4nn2flpryf/liclipse_10.0.0_macosx.cocoa.aarch64.tar.gz">LiClipse 10.0.0 Mac OS (Mac M1, Aarch64)</a>
             </li>
             <li>
-                <a href="https://www.mediafire.com/file/vyns9nmyu5zlg87/UPDATE+SITE+9.0.1.zip">LiClipse 9.0.1 Local Update Site</a>
+                <a href="https://www.mediafire.com/file_premium/5f5bxrjwhyb1ost/liclipse_10.0.0_macosx.cocoa.x86_64.tar.gz">LiClipse 10.0.0 Mac OS (x86, 64 bits)</a>
             </li>
-            <strong>Important for Mac:</strong><br>See <a href="#macos">instructions</a> to fix "LiClipse.app" is damaged and can't be opened issue.
+            <li>
+                <a href="https://www.mediafire.com/file_premium/johrf5ksmxki9hf/UPDATE_SITE_10.0.0.zip">LiClipse 10.0.0 Local Update Site</a>
+            </li>
         </ul>
         Note that 32 bit standalone versions are no longer available (so, if you need to work on a 32 bit machine,
         please use an older version of LiClipse).
         <br/>
         <br/>
         It's possible to verify the SHA256 of the downloaded file in:
-        <a href="https://www.mediafire.com/file/6vcqafull0in5k8/SHA256_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 9.0.1 files SHA256</a>.
+        <a href="https://www.mediafire.com/file_premium/soarq7horn3442n/SHA256_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 10.0.0 files SHA256</a>.
         <br/>
         <br/>
         Older versions may be downloaded from <a href="https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse">MediaFire</a>
@@ -107,7 +109,8 @@
         <br/>
         <br/>
         It's interesting to note that other plugins (such as JDT, CDT, etc.)
-        may be installed regularly in LiClipse using the provided update site for such plugins.
+        may be installed regularly in LiClipse using the provided update site for such plugins, except
+        on Mac OS where this is not currently supported.
         <br/>
         <br/>
 
@@ -124,45 +127,20 @@
 
         <hr/><h2 id="windows">Native Windows Install</h2>
 
-        Download the .exe file from <a href="https://www.mediafire.com/file/v9mkv1m1thnkti4/liclipse_9.0.1_win32.x86_64.exe">MediaFire</a> and run it locally, following the installer instructions.
+        Download the .exe file from <a href="https://www.mediafire.com/file_premium/lg3vafz4kky74rh/liclipse_10.0.0_win32.x86_64.exe">MediaFire</a> and run it locally, following the installer instructions.
         <br/>
         <br/>
 
         <br/><hr/><h2 id="macos">Native Mac OS Install</h2>
 
-        Download the .tar.gz file from <a href="https://www.mediafire.com/folder/e7h5916aq2mki/LiClipse_9.0.1">MediaFire</a>, double-click to extract it in the Downloads Folder then move it (drag it) to the <strong>/Applications</strong> dir.
+        Download the .tar.gz file (for Mac M1 <a href="https://www.mediafire.com/file_premium/28i3f4nn2flpryf/liclipse_10.0.0_macosx.cocoa.aarch64.tar.gz">download aarch64 version from MediaFire</a> and for Intel 
+        <a href="https://www.mediafire.com/file_premium/5f5bxrjwhyb1ost/liclipse_10.0.0_macosx.cocoa.x86_64.tar.gz">download x86_64 version from MediaFire</a>), double-click to extract it in the Downloads Folder then move it (drag it) to the <strong>/Applications</strong> dir.
+        Note that both <strong>LiClipse.app</strong> as well as <strong>LiClipseJre19.app</strong> must be moved and always kept side by side.
         <br/>
         <br/>
 
-        <strong>Important:</strong>
-        <br/>
-        <br/>
-
-        On latest Mac OS X versions, after extracting the .tar.gz, when executing LiClipse.app, you may get an error such as:
-        <br/>
-        <br/>
-
-        "LiClipse.app" is damaged and can't be opened. You should move it to the Trash.
-        <br/>
-        <br/>
-
-        This happens because LiClipse isn't currently signed nor distributed through the Mac App Store.
-        <br/>
-        <br/>
-
-        To overcome this, it's possible to remove the quarantine flag from the file by running:
-        <br/>
-        <br/>
-
-
-        <strong>xattr -d com.apple.quarantine /Applications/LiClipse.app</strong>
-        <br/>
-        <br/>
-        (note that the path may have to be updated if you installed it somewhere else).
-        <br/>
-        <br/>
         p.s.: if you want to verify the integrity of the download, it's possible to verify the SHA256 of the downloaded file following the instructions in:
-        <a href="https://www.mediafire.com/file/6vcqafull0in5k8/SHA256_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 9.0.1 files SHA256</a>.
+        <a href="https://www.mediafire.com/file_premium/soarq7horn3442n/SHA256_AND_INSTALL_INSTRUCTIONS.txt">LiClipse 10.0.0 files SHA256</a>.
 
         <br/>
         <br/>
@@ -171,7 +149,7 @@
         <br/><hr/><h2 id="linux">Native Linux Install</h2>
 
 
-        Download the .tar.gz from <a href="https://www.mediafire.com/folder/e7h5916aq2mki/LiClipse_9.0.1">MediaFire</a>.
+        Download the .tar.gz from <a href="https://www.mediafire.com/folder/3h65nwjxhv0nu/LiClipse_10.0.0">MediaFire</a>.
         <br/>
         <br/>
 
@@ -205,7 +183,7 @@
         <br/><hr/><h2 id="update_site">Update Site Install</h2>
 
         To use the update site, download the <strong>UPDATE SITE.zip</strong> from
-        <a href="https://www.mediafire.com/folder/e7h5916aq2mki/LiClipse_9.0.1">MediaFire</a>,
+        <a href="https://www.mediafire.com/folder/3h65nwjxhv0nu/LiClipse_10.0.0">MediaFire</a>,
         extract it in a folder, or use the URL: <a href="http://update.liclipse.com/latest">http://update.liclipse.com/latest</a> then,
         on Eclipse (or a previously downloaded LiClipse) go to:
         <br/>

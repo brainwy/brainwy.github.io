@@ -32,15 +32,14 @@
                 <a href="%(linux64_url)s">LiClipse %(liclipse_version)s Linux (64 bits)</a>
             </li>
             <li>
-                <a href="%(macos_aarch64_url)s">LiClipse %(liclipse_version)s Mac OS (aarch64 bits)</a>
+                <a href="%(macos_aarch64_url)s">LiClipse %(liclipse_version)s Mac OS (Mac M1, Aarch64)</a>
             </li>
             <li>
-                <a href="%(macos_x86_64_url)s">LiClipse %(liclipse_version)s Mac OS (x86 64 bits)</a>
+                <a href="%(macos_x86_64_url)s">LiClipse %(liclipse_version)s Mac OS (x86, 64 bits)</a>
             </li>
             <li>
                 <a href="%(update_site_url)s">LiClipse %(liclipse_version)s Local Update Site</a>
             </li>
-            <strong>Important for Mac:</strong><br>See <a href="#macos">instructions</a> to fix "LiClipse.app" is damaged and can't be opened issue.
         </ul>
         Note that 32 bit standalone versions are no longer available (so, if you need to work on a 32 bit machine,
         please use an older version of LiClipse).
@@ -56,7 +55,8 @@
         <br/>
         <br/>
         It's interesting to note that other plugins (such as JDT, CDT, etc.)
-        may be installed regularly in LiClipse using the provided update site for such plugins.
+        may be installed regularly in LiClipse using the provided update site for such plugins, except
+        on Mac OS where this is not currently supported.
         <br/>
         <br/>
 
@@ -79,37 +79,12 @@
 
         <br/><hr/><h2 id="macos">Native Mac OS Install</h2>
 
-        Download the .tar.gz file from <a href="%(folder_url)s">MediaFire</a>, double-click to extract it in the Downloads Folder then move it (drag it) to the <strong>/Applications</strong> dir.
+        Download the .tar.gz file (for Mac M1 <a href="%(macos_aarch64_url)s">download aarch64 version from MediaFire</a> and for Intel 
+        <a href="%(macos_x86_64_url)s">download x86_64 version from MediaFire</a>), double-click to extract it in the Downloads Folder then move it (drag it) to the <strong>/Applications</strong> dir.
+        Note that both <strong>LiClipse.app</strong> as well as <strong>LiClipseJre19.app</strong> must be moved and always kept side by side.
         <br/>
         <br/>
 
-        <strong>Important:</strong>
-        <br/>
-        <br/>
-
-        On latest Mac OS X versions, after extracting the .tar.gz, when executing LiClipse.app, you may get an error such as:
-        <br/>
-        <br/>
-
-        "LiClipse.app" is damaged and can't be opened. You should move it to the Trash.
-        <br/>
-        <br/>
-
-        This happens because LiClipse isn't currently signed nor distributed through the Mac App Store.
-        <br/>
-        <br/>
-
-        To overcome this, it's possible to remove the quarantine flag from the file by running:
-        <br/>
-        <br/>
-
-
-        <strong>xattr -d com.apple.quarantine /Applications/LiClipse.app</strong>
-        <br/>
-        <br/>
-        (note that the path may have to be updated if you installed it somewhere else).
-        <br/>
-        <br/>
         p.s.: if you want to verify the integrity of the download, it's possible to verify the SHA256 of the downloaded file following the instructions in:
         <a href="%(sha256_and_install_instructions_url)s">LiClipse %(liclipse_version)s files SHA256</a>.
 
