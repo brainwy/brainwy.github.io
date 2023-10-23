@@ -67,6 +67,42 @@
             <section>
                 
     <h3>Releases history</h3>
+
+        <h3>Release Highlights for LiClipse 10.2.0</h3>
+        <ul>
+        	<li>Updated to Eclipse <strong>2023-09 (4.29)</strong>.</li>
+        	<li><strong>Java 17</strong> is now required.</li>
+        	<li>Updated <strong>PyDev to 11.0.1</strong>.</li>
+        	<ul>
+        		<li>Support for Python 3.12</li>
+        		<li>Improvements in:</li>
+        		<ul>
+        			<li>Code Analysis</li>
+        			<li>Docstring generation</li>
+        			<li>Type inference</li>
+        			<li>ruff integration</li>
+        			<li>isort integration</li>
+        		</ul>
+        	</ul>
+		</ul>
+
+        <h3>Release Highlights for LiClipse 10.0.1</h3>
+        <ul>
+        	<li>LiClipse is now available for <strong>Mac M1</strong> (aarch64).</li>
+        	<li>LiClipse is now notarized on <strong>Mac OS</strong>.</li>
+        	<ul>
+        		<li>Note on Mac OS installing new plugins won't work properly right now (if you need other plugins please use standard Eclipse and install LiClipse as a plugin in it).</li>
+        	</ul>
+        	<li>The configuration files are now saved out of the installation folder by default (and thus are reused when installing a new version).</li>
+        	<ul>
+        		<li>In <strong>Windows</strong> the settings will now be under <strong>%USERPROFILE%/.liclipse/config</strong></li>
+        		<li>In <strong>Linux</strong> and <strong>Mac OS</strong> the settings will now be under <strong>~/.liclipse/config</strong></li>
+        	</ul>
+        	<li>Updated <strong>PyDev to 10.1.4</strong>.</li>
+        	<li>Updated to Eclipse <strong>2022-12 (4.26)</strong>.</li>
+		</ul>
+
+
         <h3>Release Highlights for LiClipse 9.0.1</h3>
         <ul>
         	<li>Updated <strong>PyDev to 10.0.1</strong>.</li>
@@ -74,7 +110,7 @@
 			    <li>Fixed issue parsing exception groups on Python 3.11.</li>
 			    <li>Fixed issue which prevented JDT (Java) files from being opened in the Project Explorer.</li>
 			    <li>A better error message is shown when using an unsupported Python version.</li>
-			
+
 			    <li><strong>Debugging</strong></li>
 			    <ul>
 		            <li>Updated Linux DLLs to fix <strong>PyInt_FromLong</strong> not found in Python 3.11.</li>
@@ -82,8 +118,8 @@
 	        	</ul>
         	</ul>
 		</ul>
-		
-    
+
+
         <h3>Release Highlights for LiClipse 9.0.0</h3>
         <ul>
         	<li>Updated to Eclipse <strong>2022-09 (4.25)</strong>.</li>
@@ -94,14 +130,14 @@
 					<li><strong>Python 3.11 is now supported</strong></li>
 					<li><strong>Python 2.7</strong> support is now <strong>dropped</strong> (please use LiClipse 8.2.0 if you need Python 2.7).</li>
 				</ul>
-				
+
 				<li><strong>Type inference</strong></li>
 				<ul>
 					<li>PyDev will now use typeshed by default.</li>
 					<li>It will still fallback to builtins introspection when needed.</li>
 					<li>Many improvements were done in the area which should result in better code-completion and find definition in general.</li>
 				</ul>
-				
+
 				<li><strong>Debugging</strong></li>
 				<ul>
 					<li>When evaluating slow repr a note is shown related to the environment variable which should be used to customize it.</li>
@@ -115,7 +151,7 @@
 					<li>Top-level async is supported when evaluating in debugger/console.</li>
 					<li>Step in/step over support for IPython.</li>
 					<ul>
-						<li><strong>"PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING" = "1"</strong> needs to be set in the environment when debugging IPython.</li> 
+						<li><strong>"PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING" = "1"</strong> needs to be set in the environment when debugging IPython.</li>
 					</ul>
 					<li>Properly stop at line 1 in frame eval mode.</li>
 					<li>Properly consider that argv[0] may be None.</li>
@@ -133,7 +169,7 @@
 				</ul>
         	</ul>
         </ul>
-    
+
         <h3>Release Highlights for LiClipse 8.2.0</h3>
         <ul>
         	<li>Updated to Eclipse <strong>2021-12 (4.22)</strong>.</li>

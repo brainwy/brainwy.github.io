@@ -34,6 +34,24 @@
             </li>
         </ul>
 
+        <h3>Release Highlights for LiClipse 10.2.0</h3>
+        <ul>
+        	<li>Updated to Eclipse <strong>2023-09 (4.29)</strong>.</li>
+        	<li><strong>Java 17</strong> is now required.</li>
+        	<li>Updated <strong>PyDev to 11.0.1</strong>.</li>
+        	<ul>
+        		<li>Support for Python 3.12</li>
+        		<li>Improvements in:</li>
+        		<ul>
+        			<li>Code Analysis</li>
+        			<li>Docstring generation</li>
+        			<li>Type inference</li>
+        			<li>ruff integration</li>
+        			<li>isort integration</li>
+        		</ul>
+        	</ul>
+		</ul>
+
         <h3>Release Highlights for LiClipse 10.0.1</h3>
         <ul>
         	<li>LiClipse is now available for <strong>Mac M1</strong> (aarch64).</li>
@@ -57,7 +75,7 @@
 			    <li>Fixed issue parsing exception groups on Python 3.11.</li>
 			    <li>Fixed issue which prevented JDT (Java) files from being opened in the Project Explorer.</li>
 			    <li>A better error message is shown when using an unsupported Python version.</li>
-			
+
 			    <li><strong>Debugging</strong></li>
 			    <ul>
 		            <li>Updated Linux DLLs to fix <strong>PyInt_FromLong</strong> not found in Python 3.11.</li>
@@ -65,79 +83,6 @@
 	        	</ul>
         	</ul>
 		</ul>
-		        	
-        <h3>Release Highlights for LiClipse 9.0.0</h3>
-        <ul>
-        	<li>Updated to Eclipse <strong>2022-09 (4.25)</strong>.</li>
-        	<li>Updated <strong>PyDev to 10.0.0</strong>.</li>
-        	<ul>
-				<li><strong>Only Python 3.6 onwards is now supported</strong></li>
-				<ul>
-					<li><strong>Python 3.11 is now supported</strong></li>
-					<li><strong>Python 2.7</strong> support is now <strong>dropped</strong> (please use LiClipse 8.2.0 if you need Python 2.7).</li>
-				</ul>
-				
-				<li><strong>Type inference</strong></li>
-				<ul>
-					<li>PyDev will now use typeshed by default.</li>
-					<li>It will still fallback to builtins introspection when needed.</li>
-					<li>Many improvements were done in the area which should result in better code-completion and find definition in general.</li>
-				</ul>
-				
-				<li><strong>Debugging</strong></li>
-				<ul>
-					<li>When evaluating slow repr a note is shown related to the environment variable which should be used to customize it.</li>
-					<li>Silence warning given when debugging gevent.</li>
-					<li>It's now possible to use pydevd in DAP mode directly.</li>
-					<li>All the items in tuples and lists can now be seen when expanding.</li>
-					<li>Chained exception frames are shown in the in stack.</li>
-					<li>The cause message on chained exceptions is properly shown.</li>
-					<li>ctypes arrays are properly enumerated when debugging.</li>
-					<li>The debugger is cleared after fork in non-python process.</li>
-					<li>Top-level async is supported when evaluating in debugger/console.</li>
-					<li>Step in/step over support for IPython.</li>
-					<ul>
-						<li><strong>"PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING" = "1"</strong> needs to be set in the environment when debugging IPython.</li> 
-					</ul>
-					<li>Properly stop at line 1 in frame eval mode.</li>
-					<li>Properly consider that argv[0] may be None.</li>
-					<li>Use tokenize.open to open file stream (to avoid EncodingWarnings with PYTHONWARNDEFAULTENCODING).</li>
-					<li>Protect against exception in linecache.getline.</li>
-					<li>Auto-attach to subprocess with .zip targets.</li>
-					<li>It's now possible to resolve symlinks when sending paths to the client.</li>
-					<li>Warnings when evaluating in repl are shown.</li>
-					<li>Errors with conditional breakpoints are clearer.</li>
-					<li>Breakpoint log messages are now printed when stepping too.</li>
-					<li>frame.f_locals is no longer called multiple times when assigning locals after evaluation.</li>
-					<li>If pandas has lower defaults for repr, use them.</li>
-					<li>Handle case where client may send files with different casing.</li>
-					<li>Fixed segfault attaching debugger to a running process.</li>
-				</ul>
-        	</ul>
-        </ul>
-        
-        <h3>Release Highlights for LiClipse 8.2.0</h3>
-        <ul>
-        	<li>Updated to Eclipse <strong>2021-12 (4.22)</strong>.</li>
-        	<li>Updated <strong>PyDev to 9.3.0</strong>.</li>
-        	<ul>
-				<li>Debugging</li>
-				<ul>
-					<li>Fixed issue where the variable children wouldn't expand correctly.</li>
-					<li>Fixed some case where automatic connection to subprocesses wouldn't work.</li>
-					<li>Debugging with Pandas is much improved with the addition of some custom converters.</li>
-					<li>Opt-in support to show paused greenlets by setting <strong>GEVENT_SHOW_PAUSED_GREENLETS=1</strong>.</li>
-					<li>Support for newer versions of gevent.</li>
-					<li>Information on user settings paths is cached to fix issue with slow debugging using pipenv project.</li>
-					<li>A warning is shown if getting some attribute / getting its repr is slow.</li>
-					<li>Interactively inspect matplotlib plots when the QtAgg backend is used.</li>
-					<li>Support for PySide2.</li>
-					<li>Better error messages in case Python 3.11 frozen modules are being used.</li>
-					<li><strong>Note</strong>: this will be the <strong>last</strong> debugger version supporting <strong>Python 2.7</strong>.</li>
-					<li>Newer releases will target only <strong>Python 3.6</strong> onwards.</li>
-				</ul>
-        	</ul>
-        </ul>
 
         <p><a href="history.html">View highlights for previous releases</a></p>
         <p>Supported languages feature syntax highlighting, template completion,

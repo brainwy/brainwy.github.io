@@ -13,28 +13,18 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file_premium/vqa2iovbrt9fyho/LICENSE.TXT
-https://www.mediafire.com/file_premium/vtiff9ynid04bbq/liclipse_10.0.0_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file_premium/28i3f4nn2flpryf/liclipse_10.0.0_macosx.cocoa.aarch64.tar.gz
-https://www.mediafire.com/file_premium/5f5bxrjwhyb1ost/liclipse_10.0.0_macosx.cocoa.x86_64.tar.gz
-https://www.mediafire.com/file_premium/lg3vafz4kky74rh/liclipse_10.0.0_win32.x86_64.exe
-https://www.mediafire.com/file_premium/soarq7horn3442n/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file_premium/johrf5ksmxki9hf/UPDATE_SITE_10.0.0.zip
-https://www.mediafire.com/folder/3h65nwjxhv0nu/LiClipse_10.0.0
+https://www.mediafire.com/file_premium/fu3pvfqcwbnjljt/LICENSE.TXT
+https://www.mediafire.com/file_premium/kf0vqv93qf6hszo/liclipse_10.2.0_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file_premium/qz5gldjdf1uqz9h/liclipse_10.2.0_macosx.cocoa.aarch64.tar.gz
+https://www.mediafire.com/file_premium/d10g2kf87k9nuq3/liclipse_10.2.0_macosx.cocoa.x86_64.tar.gz
+https://www.mediafire.com/file_premium/eiaq34vm0e1528q/liclipse_10.2.0_win32.x86_64.exe
+https://www.mediafire.com/file_premium/xiea7edu229x4id/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file_premium/jjxf2wjalzte0v0/UPDATE_SITE_10.2.0.zip
 '''
-#
-#
-# https://www.mediafire.com/file/7t1t64nxrtwpf55/LICENSE.TXT
-# https://www.mediafire.com/file/w2yok172hzgbwro/liclipse_9.0.1_linux.gtk.x86_64.tar.gz
-# https://www.mediafire.com/file/5ao858sjvo8gibh/liclipse_9.0.1_macosx.cocoa.x86_64.tar.gz
-# https://www.mediafire.com/file/v9mkv1m1thnkti4/liclipse_9.0.1_win32.x86_64.exe
-# https://www.mediafire.com/file/6vcqafull0in5k8/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-# https://www.mediafire.com/file/vyns9nmyu5zlg87/UPDATE+SITE+9.0.1.zip
-# https://www.mediafire.com/folder/e7h5916aq2mki/LiClipse_9.0.1
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '10.0.0',
+    'liclipse_version': '10.2.0',
 }
 
 help_location = r'X:\liclipsews\liclipsews\liclipse\plugins\com.brainwy.liclipse.help'
@@ -311,7 +301,7 @@ def main():
 
         elif line.endswith('macosx.cocoa.x86_64.tar.gz'):
             DOWNLOAD_REPLACEMENTS['macos_x86_64_url'] = line
-            
+
         elif line.endswith('macosx.cocoa.aarch64.tar.gz'):
             DOWNLOAD_REPLACEMENTS['macos_aarch64_url'] = line
 
