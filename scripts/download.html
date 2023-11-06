@@ -79,14 +79,18 @@
 
         <br/><hr/><h2 id="macos">Native Mac OS Install</h2>
 
-        Download the .tar.gz file (for Mac M1 <a href="%(macos_aarch64_url)s">download aarch64 version from MediaFire</a> and for Intel 
+        Download the .tar.gz file (for Mac M1 <a href="%(macos_aarch64_url)s">download aarch64 version from MediaFire</a> and for Intel
         <a href="%(macos_x86_64_url)s">download x86_64 version from MediaFire</a>), double-click to extract it in the Downloads Folder then move it (drag it) to the <strong>/Applications</strong> dir.
         Note that both <strong>LiClipse.app</strong> as well as <strong>LiClipseJre19.app</strong> must be moved and always kept side by side.
         <br/>
         <br/>
 
-        p.s.: if you want to verify the integrity of the download, it's possible to verify the SHA256 of the downloaded file following the instructions in:
-        <a href="%(sha256_and_install_instructions_url)s">LiClipse %(liclipse_version)s files SHA256</a>.
+        Also, on latest Mac OS X versions, after extracting the .tar.gz, when executing LiClipse.app, you may get an error. In this case,
+        you must remove the quarantine flag:
+        <br/>
+        <br/>
+
+        <strong>xattr -d com.apple.quarantine /Applications/LiClipse.app</strong>
 
         <br/>
         <br/>
