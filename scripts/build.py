@@ -13,18 +13,18 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file_premium/fu3pvfqcwbnjljt/LICENSE.TXT
-https://www.mediafire.com/file_premium/kf0vqv93qf6hszo/liclipse_10.2.0_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file_premium/qz5gldjdf1uqz9h/liclipse_10.2.0_macosx.cocoa.aarch64.tar.gz
-https://www.mediafire.com/file_premium/d10g2kf87k9nuq3/liclipse_10.2.0_macosx.cocoa.x86_64.tar.gz
-https://www.mediafire.com/file_premium/eiaq34vm0e1528q/liclipse_10.2.0_win32.x86_64.exe
-https://www.mediafire.com/file_premium/xiea7edu229x4id/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file_premium/jjxf2wjalzte0v0/UPDATE_SITE_10.2.0.zip
+https://www.mediafire.com/file/7t9nrhh5cri3krk/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file/ppszzcxio8q3j6m/LICENSE.TXT
+https://www.mediafire.com/file/p6m2zil0zv8gsg3/UPDATE+SITE+11.0.0.zip
+https://www.mediafire.com/file/svt80a5ehhj9i5q/liclipse_11.0.0_win32.x86_64.exe
+https://www.mediafire.com/file/2f6dul83qop8tao/liclipse_11.0.0_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file/125ia1bwm1wph0x/liclipse_11.0.0_macosx.cocoa.aarch64.tar.gz
+https://www.mediafire.com/file/am6uf9d2fyj6mpv/liclipse_11.0.0_macosx.cocoa.x86_64.tar.gz
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '10.2.0',
+    'liclipse_version': '11.0.0',
 }
 
 help_location = r'X:\liclipsews\liclipsews\liclipse\plugins\com.brainwy.liclipse.help'
@@ -79,7 +79,7 @@ HEADER = '''
 
 
 
-<p><small>Copyright 2013-2023 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2024 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 '''
 
 #===================================================================================================
@@ -203,7 +203,7 @@ Choose the topic you're interested in...<br/>
 
     return '''
 %(li)s<br><br><br>
-<p><small>Copyright 2013-2023 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2024 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}, open_source
 MANUAL_OPEN_SOURCE_HEADER = None
 

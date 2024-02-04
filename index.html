@@ -61,7 +61,7 @@
 
 
 
-<p><small>Copyright 2013-2023 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2024 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 
             </header>
             <section>
@@ -88,6 +88,32 @@
             </li>
         </ul>
 
+        <h3>Release Highlights for LiClipse 11.0.0</h3>
+        <ul>
+        	<li>Updated to Eclipse <strong>2023-12 (4.30)</strong>.</li>
+        	<li>Updated <strong>PyDev to 12.0.0</strong>.</li>
+        	<ul>
+				<li><strong>Only Python 3.8 onwards is now supported</strong></li>
+				<ul>
+					<li><strong>Python 3.6</strong> and <strong>3.7</strong> support is now <strong>dropped</strong> (please use <strong>LiClipse 10.2.0</strong> if you still use it).</li>
+				</ul>
+
+				<li><strong>Debugger</strong></li>
+	        	<ul>
+					<li><strong>sys.monitoring</strong> is now used in Python 3.12 (and it's <strong>much</strong> faster than any previous version).</li>
+					<li>A new setting was added in the <strong>Preferences &gt; PyDev &gt; Debug</strong> to debug <strong>just my code</strong> (meaning that when stepping it will just step into files under PyDev source folders).</li>
+					<li>Improved the step into function (activated with <strong>Ctrl+Alt</strong> then <strong>Click function</strong> to step into).</li>
+					<li>Support for Python 3.6 and 3.7 was dropped (only Python 3.8 onwards is now supported).</li>
+	        	</ul>
+
+				<li><strong>Ruff</strong></li>
+				<ul>
+					<li>Ruff can now be used as a code formatter.</li>
+					<li>The latest ruff (<strong>0.1.x</strong>) is now supported (as it broke backward compatibility in its <strong>0.1.0</strong> version).</li>
+				</ul>
+        	</ul>
+		</ul>
+
         <h3>Release Highlights for LiClipse 10.2.0</h3>
         <ul>
         	<li>Updated to Eclipse <strong>2023-09 (4.29)</strong>.</li>
@@ -107,38 +133,6 @@
         			<li>ruff integration</li>
         			<li>isort integration</li>
         		</ul>
-        	</ul>
-		</ul>
-
-        <h3>Release Highlights for LiClipse 10.0.1</h3>
-        <ul>
-        	<li>LiClipse is now available for <strong>Mac M1</strong> (aarch64).</li>
-        	<li>LiClipse is now notarized on <strong>Mac OS</strong>.</li>
-        	<ul>
-        		<li>Note on Mac OS installing new plugins won't work properly right now (if you need other plugins please use standard Eclipse and install LiClipse as a plugin in it).</li>
-        	</ul>
-        	<li>The configuration files are now saved out of the installation folder by default (and thus are reused when installing a new version).</li>
-        	<ul>
-        		<li>In <strong>Windows</strong> the settings will now be under <strong>%USERPROFILE%/.liclipse/config</strong></li>
-        		<li>In <strong>Linux</strong> and <strong>Mac OS</strong> the settings will now be under <strong>~/.liclipse/config</strong></li>
-        	</ul>
-        	<li>Updated <strong>PyDev to 10.1.4</strong>.</li>
-        	<li>Updated to Eclipse <strong>2022-12 (4.26)</strong>.</li>
-		</ul>
-
-        <h3>Release Highlights for LiClipse 9.0.1</h3>
-        <ul>
-        	<li>Updated <strong>PyDev to 10.0.1</strong>.</li>
-        	<ul>
-			    <li>Fixed issue parsing exception groups on Python 3.11.</li>
-			    <li>Fixed issue which prevented JDT (Java) files from being opened in the Project Explorer.</li>
-			    <li>A better error message is shown when using an unsupported Python version.</li>
-
-			    <li><strong>Debugging</strong></li>
-			    <ul>
-		            <li>Updated Linux DLLs to fix <strong>PyInt_FromLong</strong> not found in Python 3.11.</li>
-		            <li>Consider that paths are not case sensitive on Mac OS.</li>
-	        	</ul>
         	</ul>
 		</ul>
 

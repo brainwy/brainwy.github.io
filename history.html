@@ -61,12 +61,39 @@
 
 
 
-<p><small>Copyright 2013-2023 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2024 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 
             </header>
             <section>
                 
     <h3>Releases history</h3>
+
+        <h3>Release Highlights for LiClipse 11.0.0</h3>
+        <ul>
+        	<li>Updated to Eclipse <strong>2023-12 (4.30)</strong>.</li>
+        	<li>Updated <strong>PyDev to 12.0.0</strong>.</li>
+        	<ul>
+				<li><strong>Only Python 3.8 onwards is now supported</strong></li>
+				<ul>
+					<li><strong>Python 3.6</strong> and <strong>3.7</strong> support is now <strong>dropped</strong> (please use <strong>LiClipse 10.2.0</strong> if you still use it).</li>
+				</ul>
+
+				<li><strong>Debugger</strong></li>
+	        	<ul>
+					<li><strong>sys.monitoring</strong> is now used in Python 3.12 (and it's <strong>much</strong> faster than any previous version).</li>
+					<li>A new setting was added in the <strong>Preferences &gt; PyDev &gt; Debug</strong> to debug <strong>just my code</strong> (meaning that when stepping it will just step into files under PyDev source folders).</li>
+					<li>Improved the step into function (activated with <strong>Ctrl+Alt</strong> then <strong>Click function</strong> to step into).</li>
+					<li>Support for Python 3.6 and 3.7 was dropped (only Python 3.8 onwards is now supported).</li>
+	        	</ul>
+
+				<li><strong>Ruff</strong></li>
+				<ul>
+					<li>Ruff can now be used as a code formatter.</li>
+					<li>The latest ruff (<strong>0.1.x</strong>) is now supported (as it broke backward compatibility in its <strong>0.1.0</strong> version).</li>
+				</ul>
+        	</ul>
+		</ul>
+
 
         <h3>Release Highlights for LiClipse 10.2.0</h3>
         <ul>
