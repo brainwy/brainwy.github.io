@@ -88,6 +88,20 @@
             </li>
         </ul>
 
+        <h3>Release Highlights for LiClipse 11.1.0</h3>
+        <ul>
+        	<li>Updated to Eclipse <strong>2024-03 (4.31)</strong>.</li>
+        	<li>Updated <strong>PyDev to 12.1.0</strong>.</li>
+        	<ul>
+			    <li>Fixed issue parsing <strong>await</strong> inside of <strong>case</strong> block.</li>
+			    <li>Call <strong>django.setup()</strong> when running django unit-tests (with builtin unittest runner).</li>
+			    <li>Fixed corner case where conftest.py wouldn't be properly gotten with previous approach when running pytest.</li>
+			    <li>Template variables converted from jython to java code (pytemplate_defaults.py).</li>
+			    <li>Properly building With Eclipse 2024-03 (fixes by Florian Kroiß).</li>
+			    <li>Using flake8 binary instead of getting from python works (fix by slaclau).</li>
+        	</ul>
+		</ul>
+
         <h3>Release Highlights for LiClipse 11.0.0</h3>
         <ul>
         	<li>Updated to Eclipse <strong>2023-12 (4.30)</strong>.</li>
