@@ -13,18 +13,18 @@ import warnings
 # On a new release, update the links and version.
 
 DOWNLOADS = '''
-https://www.mediafire.com/file_premium/frkznkbvh5bzryc/SHA256_AND_INSTALL_INSTRUCTIONS.txt
-https://www.mediafire.com/file_premium/n3r0m9hv4vypl2y/LICENSE.TXT
-https://www.mediafire.com/file_premium/wjx2mlu6jlve1j1/UPDATE_SITE_11.1.0.zip
-https://www.mediafire.com/file_premium/u52s00udtjlhdbi/liclipse_11.1.0_win32.x86_64.exe
-https://www.mediafire.com/file_premium/yvh4pjh3viveurn/liclipse_11.1.0_linux.gtk.x86_64.tar.gz
-https://www.mediafire.com/file_premium/bzdks2h82ran5jb/liclipse_11.1.0_macosx.cocoa.aarch64.tar.gz
-https://www.mediafire.com/file_premium/bh5hc47dg1iamp7/liclipse_11.1.0_macosx.cocoa.x86_64.tar.gz
+https://www.mediafire.com/file_premium/l0lumvvob3rznjw/LICENSE.TXT
+https://www.mediafire.com/file_premium/cj9sxqllqjivuya/liclipse_12.0.1_linux.gtk.x86_64.tar.gz
+https://www.mediafire.com/file_premium/o9ccnc5f0ks4dgq/liclipse_12.0.1_macosx.cocoa.aarch64.tar.gz
+https://www.mediafire.com/file_premium/b8h7wnjqtalkxls/liclipse_12.0.1_macosx.cocoa.x86_64.tar.gz
+https://www.mediafire.com/file_premium/p2eeii1qbyrz0qn/liclipse_12.0.1_win32.x86_64.exe
+https://www.mediafire.com/file_premium/vdse7az25oi0pcb/SHA256_AND_INSTALL_INSTRUCTIONS.txt
+https://www.mediafire.com/file_premium/rgpnsss69z081qr/UPDATE_SITE_12.0.1.zip
 '''
 
 DOWNLOAD_REPLACEMENTS = {
     'all_versions_url': 'https://www.mediafire.com/folder/ka5iei6qnyaq4/LiClipse',
-    'liclipse_version': '11.1.0',
+    'liclipse_version': '12.0.1',
 }
 
 help_location = r'X:\liclipsews\liclipsews\liclipse\plugins\com.brainwy.liclipse.help'
@@ -37,6 +37,7 @@ assert os.path.exists(help_location)
 
 # Uncomment to skip the generation of the help.
 # help_location = ''
+
 
 #===================================================================================================
 # copytree
@@ -58,7 +59,6 @@ default_template_contents = open(os.path.join(os.path.dirname(__file__), 'templa
 this_file_dir = os.path.dirname(__file__)
 page_dir = os.path.dirname(this_file_dir)
 
-
 HEADER = '''
 <h1 class="header_liclipse">LiClipse</h1>
 <p>Lightweight editors, theming and usability improvements for Eclipse</p>
@@ -79,8 +79,9 @@ HEADER = '''
 
 
 
-<p><small>Copyright 2013-2024 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2025 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 '''
+
 
 #===================================================================================================
 # apply_to
@@ -94,6 +95,7 @@ def apply_to(filename, header=None, path=None, template_contents=None, kwargs=No
     apply_to_contents(
         contents, os.path.basename(filename), body, header or HEADER, path=path, template_contents=template_contents, kwargs=kwargs)
 
+
 def template_replace(contents, kwargs):
 
     to_replace = ['body', 'title', 'image_area', 'quote_area', 'right_area', 'contents_area', 'header']
@@ -106,6 +108,7 @@ def template_replace(contents, kwargs):
         contents = contents.replace('%(' + r + ')s', c)
 
     return contents
+
 
 #===================================================================================================
 # apply_to_contents
@@ -135,6 +138,7 @@ def extract(contents, tag):
 
 
 class Info:
+
     def __init__(self, title, open_source):
         self.title = title
         self.open_source = open_source
@@ -159,7 +163,6 @@ FILE_TO_INFO = dict([
     ('preview.html', Info('HTML Preview', False)),
 ])
 
-
 if os.path.exists(help_location):
     for f in os.listdir(help_location):
         if not f.endswith('.html'):
@@ -169,6 +172,7 @@ if os.path.exists(help_location):
         FILE_TO_INFO[f].filename = os.path.join(help_location, f)
 else:
     print('Dir: %s does not exist (unable to generate related pages)' % help_location)
+
 
 #===================================================================================================
 # create_manual_header
@@ -203,8 +207,10 @@ Choose the topic you're interested in...<br/>
 
     return '''
 %(li)s<br><br><br>
-<p><small>Copyright 2013-2024 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
+<p><small>Copyright 2013-2025 - Brainwy Software Ltda.<br/>Theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></small></p>
 ''' % {'li': '\n'.join(lis)}, open_source
+
+
 MANUAL_OPEN_SOURCE_HEADER = None
 
 if os.path.exists(help_location):
@@ -213,12 +219,10 @@ else:
     warnings.warn('Not creating help. %s does not exist.' % (help_location,))
 
 
-
 #===================================================================================================
 # create_manual_page
 #===================================================================================================
 def create_manual_page():
-
 
     manual_body = '''
 <h3>Choose the topic you're interested in...</h3>
@@ -226,7 +230,6 @@ Note: for the manual on the Open Source <a href="text/index.html">LiClipseText</
 <a href="text/manual.html">LiClipseText Manual</a>
 '''
     apply_to_contents(manual_body, 'manual.html', manual_body, MANUAL_NOT_OPEN_SOURCE_HEADER, None, None)
-
 
 
 #===================================================================================================
@@ -253,34 +256,36 @@ def main():
                 prev = 'manual.html'
                 title_prev = 'Manual'
 
-                next = os.path.basename(open_source_values[i+1].filename)
-                title_next = open_source_values[i+1].title
+                next = os.path.basename(open_source_values[i + 1].filename)
+                title_next = open_source_values[i + 1].title
 
-            elif i == len(open_source_values)-1:
-                prev = os.path.basename(open_source_values[i-1].filename)
-                title_prev = open_source_values[i-1].title
+            elif i == len(open_source_values) - 1:
+                prev = os.path.basename(open_source_values[i - 1].filename)
+                title_prev = open_source_values[i - 1].title
 
                 next = 'manual.html'
-                title_next='Manual'
+                title_next = 'Manual'
             else:
-                prev = os.path.basename(open_source_values[i-1].filename)
-                title_prev = open_source_values[i-1].title
+                prev = os.path.basename(open_source_values[i - 1].filename)
+                title_prev = open_source_values[i - 1].title
 
-                next = os.path.basename(open_source_values[i+1].filename)
-                title_next = open_source_values[i+1].title
+                next = os.path.basename(open_source_values[i + 1].filename)
+                title_next = open_source_values[i + 1].title
 
             print('applying to:', info.filename)
             title_next = title_next.replace('&nbsp;', '')
             title_prev = title_prev.replace('&nbsp;', '')
             title_next = '(%s)' % title_next
             title_prev = '(%s)' % title_prev
+
             def replace_body(body):
                 return body.replace('src="./images', 'src="../images')
+
             apply_to(info.filename, path='text', template_contents=text_template_manual_contents, kwargs={
                 'title': info.title, 'root': 'manual.html', 'prev':prev, 'next':next, 'title_prev': title_prev, 'title_next':title_next},
                      replace_body=replace_body)
             basename = os.path.basename(info.filename)
-            apply_to_contents('', basename,'This file was moved to: <a href="text/%s">text/%s</a>' % (basename,basename), HEADER, )
+            apply_to_contents('', basename, 'This file was moved to: <a href="text/%s">text/%s</a>' % (basename, basename), HEADER,)
 
     # Others
     for line in DOWNLOADS.splitlines():
@@ -323,13 +328,12 @@ def main():
     apply_to(os.path.join(this_file_dir, 'index.html'))
     apply_to(os.path.join(this_file_dir, 'languages.html'))
     apply_to(os.path.join(this_file_dir, 'history.html'))
-    apply_to(os.path.join(this_file_dir, 'download.html'),kwargs=DOWNLOAD_REPLACEMENTS)
+    apply_to(os.path.join(this_file_dir, 'download.html'), kwargs=DOWNLOAD_REPLACEMENTS)
     apply_to(os.path.join(this_file_dir, 'license.html'))
     apply_to(os.path.join(this_file_dir, 'faq.html'))
     apply_to(os.path.join(this_file_dir, 'buy.html'))
     apply_to(os.path.join(this_file_dir, 'multi_edition_video.html'))
     apply_to(os.path.join(this_file_dir, 'contact.html'))
-
 
     apply_to(os.path.join(this_file_dir, 'text', 'index.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'LiClipseText'})
     apply_to(os.path.join(this_file_dir, 'text', 'about.html'), path='text', template_contents=text_template_contents, kwargs={'title': 'About'})

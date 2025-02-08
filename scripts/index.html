@@ -34,6 +34,27 @@
             </li>
         </ul>
 
+        <h3>Release Highlights for LiClipse 12.0.1</h3>
+        <ul>
+            <li>Updated to Eclipse <strong>2024-12 (4.34)</strong>.</li>
+            <li>Updated <strong>PyDev to 12.0.1</strong>.</li>
+            <ul>
+                <li>Support for <strong>Python 3.13</strong></li>
+                <li>Support for type alias syntax</li>
+                <li>Parsing type vars (still missing semantic analysis).</li>
+                <li>Support for Annotated[cls] in code-completion</li>
+                <li>Added condition to resolve as True|False in templates</li>
+                <li>Updated typeshed</li>
+                <li>Updated PyDev debugger (pydevd) to version <strong>3.3.0</strong></li>
+                <li>Updated minimum Java version requirement to <strong>Java 17</strong></li>
+                <li>Changed ruff linting command to <strong>ruff check</strong> to match breaking change</li>
+                <li>Improved docstring assist to properly handle multi-line function signatures</li>
+                <li>Converted paragraph wrapping functionality from Jython to Java</li>
+                <li>Changed Surround with <strong>try..except</strong> to use <strong>try..except Exception</strong> as default</li>
+                <li>Supporting trailing commas in multi-line with statements</li>
+            </ul>
+        </ul>
+
         <h3>Release Highlights for LiClipse 11.1.0</h3>
         <ul>
         	<li>Updated to Eclipse <strong>2024-03 (4.31)</strong>.</li>
@@ -48,53 +69,6 @@
         	</ul>
 		</ul>
 
-        <h3>Release Highlights for LiClipse 11.0.0</h3>
-        <ul>
-        	<li>Updated to Eclipse <strong>2023-12 (4.30)</strong>.</li>
-        	<li>Updated <strong>PyDev to 12.0.0</strong>.</li>
-        	<ul>
-				<li><strong>Only Python 3.8 onwards is now supported</strong></li>
-				<ul>
-					<li><strong>Python 3.6</strong> and <strong>3.7</strong> support is now <strong>dropped</strong> (please use <strong>LiClipse 10.2.0</strong> if you still use it).</li>
-				</ul>
-
-				<li><strong>Debugger</strong></li>
-	        	<ul>
-					<li><strong>sys.monitoring</strong> is now used in Python 3.12 (and it's <strong>much</strong> faster than any previous version).</li>
-					<li>A new setting was added in the <strong>Preferences &gt; PyDev &gt; Debug</strong> to debug <strong>just my code</strong> (meaning that when stepping it will just step into files under PyDev source folders).</li>
-					<li>Improved the step into function (activated with <strong>Ctrl+Alt</strong> then <strong>Click function</strong> to step into).</li>
-					<li>Support for Python 3.6 and 3.7 was dropped (only Python 3.8 onwards is now supported).</li>
-	        	</ul>
-
-				<li><strong>Ruff</strong></li>
-				<ul>
-					<li>Ruff can now be used as a code formatter.</li>
-					<li>The latest ruff (<strong>0.1.x</strong>) is now supported (as it broke backward compatibility in its <strong>0.1.0</strong> version).</li>
-				</ul>
-        	</ul>
-		</ul>
-
-        <h3>Release Highlights for LiClipse 10.2.0</h3>
-        <ul>
-        	<li>Updated to Eclipse <strong>2023-09 (4.29)</strong>.</li>
-        	<li><strong>Java 17</strong> is now required.</li>
-        	<li>Updated <strong>LiClipseText to 2.5.0</strong>.</li>
-        	<ul>
-        		<li>Support for <strong>toml</strong> files</li>
-        	</ul>
-        	<li>Updated <strong>PyDev to 11.0.1</strong>.</li>
-        	<ul>
-        		<li>Support for Python 3.12</li>
-        		<li>Improvements in:</li>
-        		<ul>
-        			<li>Code Analysis</li>
-        			<li>Docstring generation</li>
-        			<li>Type inference</li>
-        			<li>ruff integration</li>
-        			<li>isort integration</li>
-        		</ul>
-        	</ul>
-		</ul>
 
         <p><a href="history.html">View highlights for previous releases</a></p>
         <p>Supported languages feature syntax highlighting, template completion,
